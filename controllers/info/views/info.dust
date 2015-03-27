@@ -1,0 +1,28 @@
+{>"../../../layout/layout"/}
+ 
+{<page-content}   
+     <div class="container "  >
+       <div class="row ">
+         <img src="/js/custom/home/shop.jpg" class="img-responsive img-rounded" alt="Responsive image"/>
+       </div>
+       <div class="row">
+            <div class="panel panel-default">
+				 <div class="panel-body">
+				      <h1>Hello, folks!</h1>
+				  <p>
+				     welcome to shopTogether ,now you can shop with your company mates and college mates at ShopTogether . 
+				     find out your company mates , college mates on shopTogether who are shopping at top e-commerce sites 
+				     like flipkart ,Snapdeal ,Amazon ,Myntra etc.
+				  </p>
+				  <p><a class="btn btn-info btn-lg" href= "/login" role="button">login</a></p>
+				 
+			     </div>
+			 </div>    	 
+            
+       <div>
+     </div>
+ {/page-content} 
+ {<script-content}
+   
+{/script-content}
+ 

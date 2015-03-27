@@ -1,0 +1,155 @@
+{>"../../../layout/layout"/}
+
+{<page-content}
+<div class="container-fluid">
+	<div class="col-md-10 col-md-offset-1"> 
+		<div class="row">
+			<div id ="bread">
+				<ul class="breadcrumb">  
+					  <li>  
+						<a href="/home">Home</a> <span class="divider">></span>  
+					  </li> 
+					 {@if cond="(('{brand}'== 'all'))"}
+					  <li class="active">view-by-brand</li>
+
+					  {:else}
+						  <li>
+							  <a href="/view-by-brand">view-by-brand</a> <span class="divider">></span> 
+						  </li>
+						 <li class="active">{brand}</li>
+					{/if}     
+				</ul>
+			</div>
+		</div>
+		 {@if cond="(('{brand}'== 'all'))"}
+		<div class="row">
+				   <div class="col-md-6" align='center'>
+					   <h3> <strong>TOP BRANDS</strong></h3>
+					   <h5>Brands listed in alphabetical ORDER
+						&nbsp;/&nbsp;<a href="#a-d">A - D</a>
+						&nbsp;/&nbsp;<a href="#e-l">E - L</a>
+						&nbsp;/&nbsp;<a href="#m-p">M - P</a>
+						&nbsp;/&nbsp;<a href="#q-z">Q - Z</a>
+					   </h5>
+					   
+				  </div>
+			
+                 <div class=" col-md-5 col-md-offset-1 input-group ">
+					 <div class="input-group " style="margin-top:42px;">
+						<span class="input-group-addon"><span class="glyphicon glyphicon-search"></span></span>
+						<input type="text" class="form-control" placeholder="search brand">
+					 </div>
+				 </div>
+		</div>
+		<hr>
+		<div class="row " align='center'>
+			   <section >
+				   <h2 id="a-d">A-D</h2>
+				   <ul class="list-inline" >
+					   {#data}
+					   <li>
+							<a  href="/view-by-brand/type/{brand_name}">
+							   <img width="120" class='img-rounded' height="70"  src={image_source}>
+							</a>
+
+					   </li>
+					   {/data}
+				   </ul>   
+			   </section>   
+		</div>
+			
+		
+		{:else}
+		<div class="row">
+               
+		   <div class="col-md-2" id="place1">
+					  <div class="panel panel-default">	
+						<div class="panel-body">
+					     {#data1}	
+						<img src={image_source} height="60" width="120" class="img-rounded" />
+			            </br> 
+						<h2 id="brandLove1" class="text-center" title="get notifications"><span  class='glyphicon glyphicon-heart'></span></h2>
+						 <div>
+						      <p><a class='btn btn-primary btn-md' href='#' target='_blank'>Shop on flipkart</a></p>
+						 </div>
+						{/data1}
+						<p>&nbsp;</p>
+						
+						</div>
+					  </div>	
+					  <!-- panel 1-->
+		  </div><!-- col-md-2 -->
+			   
+			   <div class="col-md-9">
+				   {?data2}
+				   <ul  style="list-style-type: none;">
+					 {#data2}
+					  <li>
+					   <div class="panel panel-default">
+						   <div class="panel-heading">
+									<h3 class="panel-title"> {extra_off} % extra discount on {brand} {type} 
+										--- <a title= "see all {company} offers" href="/top-online-stores/type/{company}">
+										{company}</a> </h3>
+						   </div>
+						<div class="panel-body">
+							<div class="row">
+								<div class="col-md-11">
+									<ul class="list-inline">
+									 <li>	
+									 <a href="/offerProfile/id/{id}">
+										 
+										 <img src={image_source} height="60" width="120" class="img-rounded" /> 
+										 
+									 </a>
+									</li>
+									<li>
+										{plan_name}
+									</li>	
+									
+									</ul>
+								</div>
+								<div class="col-md-1">
+									<h2 class='text-right togstar'  id="brandstar{id}"><span class='glyphicon glyphicon-star'></span></h2>
+								</div>	
+							</div> 
+						</div>
+						<div class="panel-footer">Panel footer</div>   
+						   
+					  </div>
+					   </li>{~n}
+					 {/data2}
+					 </ul>
+				   {:else}
+				   <div class="panel panel-default">
+						<div class="panel-body">
+							{#data1}
+							<div class="row" style="margin-top:35px;margin-left:15px;margin-bottom:8px;">
+									there are  currently no offers from {brand_name} ,like this brand to get all offers from {brand_name}
+							</div> 
+							{/data1}
+						</div>   
+                    </div>
+				    {/data2}
+			   </div>  
+           </div>
+		
+		
+		
+		{/if}
+	</div>
+</div>
+
+{/page-content}
+{<script-content}
+{?data1} 
+ <script type="text/javascript" src='/js/custom/viewbybrand/viewbybrand.js'></script>
+<script>     
+	
+          var brand ="{brand}";
+		  {#data1}
+		  var id =  {id};
+		  {/data1}
+     	  
+</script>
+{/data1}
+{/script-content}

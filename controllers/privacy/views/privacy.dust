@@ -1,0 +1,125 @@
+{>"../../../layout/layout"/}
+{<css-content}
+<link rel="stylesheet" href="/css/bootstrap-multislect/multiple_select.css">
+ {/css-content}
+{<page-content}
+<div class="container">
+	  <div class="row">
+		   <div class="col-md-3">
+			    <div class="panel panel-default">
+					<div class="panel-heading">
+					    Settings
+					</div>
+				  <div class="panel-body">
+						  <ul class="nav nav-pills nav-stacked">
+							<li ><a href="/account">Account</a></li>
+							<li class="active"><a href="#">Privacy</a></li>
+							<li><a href="/preferences">Preferences</a></li>
+							<li><a href="/network">network settings</a></li>
+						</ul>
+				  </div>
+			     </div>
+	        </div>
+		    <div class="col-md-9">
+				 
+				 <div class="panel panel-default">
+					<div class="panel-heading">
+						<center>change your privacy</center>
+					</div>
+				  <div class="panel-body">
+					  <div id="ff">
+						  
+					  </div>
+					 <div class="row">
+						   <div class="col-sm-5">
+								who can view my profile
+						   </div>
+						 <div  class="col-sm-3">
+						       <select multiple="multiple" id="profile">
+									<option value="2" selected>company mates</option>
+									<option value="3" >city mates</option>
+								    <option value="4" >local mates</option>
+								</select>
+						 </div>
+<div class="col-sm-1"><span class="profile-tooltip fa fa-info-circle fa-lg"  title= "choose who can view your public proflie" ></span></div>
+					 </div>
+					  <hr width=75%  align="center">
+					  <div class="row" style="margin-top: 10px;">
+						   <div class="col-sm-5">
+								who can contact me
+						   </div>
+						 <div  class="col-sm-3">
+						       <select multiple="multiple" id="contact">
+									<option value="2">company mates</option>
+									<option value="3" >city mates</option>
+								    <option value="4">local mates</option>
+								</select>
+						 </div>
+<div class="col-sm-1"><span class="contact-tooltip fa fa-info-circle fa-lg" title= "choose who can send private message " ></span></div>
+					 </div>
+					  <hr width=75%  align="center">
+					  <div class="row" style="margin-top: 10px;">
+						   <div class="col-sm-5">
+								who can sent invite for offer
+						   </div>
+						 <div  class="col-sm-3">
+						       <select multiple="multiple" id="invite">
+									<option value="2">company mates</option>
+									<option value="3" >city mates</option>
+								    <option value="4" >local mates</option>
+								</select>
+						 </div>
+<div class="col-sm-1"><span class="invite-tooltip fa fa-info-circle fa-lg" title= "choose who can invite you for an offer"></span></div>
+					 </div>
+					  <hr width=75%  align="center">
+					  <div class="row" style="margin-top: 10px;">
+						   <div class="col-sm-5">
+								who can view your email address
+						   </div>
+						 <div  class="col-sm-3">
+						       <select multiple="multiple" id="email">
+									<option value="2">company mates</option>
+									<option value="3" >city mates</option>
+								    <option value="4" selected>local mates</option>
+								</select>
+						 </div>
+				<div class="col-sm-1"><span  class="email-tooltip fa fa-info-circle fa-lg" title= "choose who can view your email" ></span></div>
+					 </div>
+					  <hr width=75%  align="center">
+					  <div class="row" style="margin-top: 10px;">
+						   <div class="col-sm-5">
+								who can follow me
+						   </div>
+						 <div  class="col-sm-3">
+						       <select multiple="multiple" id="follow">
+									<option value="2">company mates</option>
+									<option value="3" >city mates</option>
+								    <option value="4" >local mates</option>
+								</select>
+						 </div>
+		<div class="col-sm-1"><span class=" follow-tooltip fa fa-info-circle fa-lg" title= "choose who can follow"></span></div>
+					 </div>
+					  <hr width=75%  align="center">
+				     <div class="row" style="margin-top: 10px;">
+						   <div class="col-sm-offset-4 col-sm-2">
+								   <button id="save"  class="btn btn-success" >Save</button>
+						   </div> 
+					  </div>
+				  </div>
+				</div>
+				
+				
+				
+		    </div>
+      </div>
+</div>
+{/page-content}
+{<script-content}
+     <script src='/js/custom/privacy/privacy.js'></script>
+     <script src="/js/bootstrap-multiselect/multiple_select.js"></script>
+     <script>
+        $('select').multipleSelect({
+		placeholder: "Here is the placeholder"
+		});
+     </script>
+ {/script-content}

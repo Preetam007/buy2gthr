@@ -1,0 +1,160 @@
+{>"../../../layout/layout"/}
+{<css-content}
+ {/css-content}
+{<page-content}
+     <div class="container-fluid">
+       <div class="col-md-10 col-md-offset-1">
+           <div class="row">
+               <div id ="bread">
+                  <ul class="breadcrumb">
+                          <li>
+                            <a href="/home">Home</a> <span class="divider">></span>
+                          </li>
+                         {@if cond="(('{store}'== 'all'))"}
+                          <li class="active">buy1get1</li>
+                         {:else}
+                              <li>
+                                  <a href="/buy1get1">buy1get1</a> <span class="divider">></span>
+                              </li>
+                             <li class="active">{store}</li>
+                          {/if}
+                  </ul>
+               </div>
+           </div>
+           {@if cond="(('{store}'== 'all'))"}
+           <div class="row">
+               <div align='center'>
+                   <h5> <strong>Popular Online Stores</strong></h3>
+                   <hr>
+               <section style="border:1px dotted black;">
+                   <ul class="list-inline"  >
+                       {#data}
+                       <li style="margin-top:22px;">
+                            <a  href="/buy1get1/type/{tag_line}">
+                               <img width="120" class='img-rounded' height="70" alt="2go ACTIVE GEAR USA"  src={image_source}>
+                            </a>
+
+                       </li>
+                       {/data}
+                   </ul>
+				   <a href="/top-online-stores" class="pull-right">see more</a>
+               </section>
+               </div>
+           </div>
+		   <div class="row">
+               <div align='center'>
+                   <h5> <strong>latest buy1get1 offers</strong></h3>
+                   <hr>
+               <section >
+                   <ul class="list-inline"  >
+                       {#buydata}
+                       <li style="margin-top:22px;">
+						   <div style="border:1px dotted black; width : 190px">
+						        <div >
+									<a  href="/offerProfile/id/{id}">
+									   <img width="150" class='img-rounded' height="70" alt="2go ACTIVE GEAR USA"  src={image_source}>
+									</a>
+								 </div>
+							<div style="margin-top : 6px ; "> <p>{plan_name} </p></div>
+							<div style="margin-top : 6px ; background:#e3e3e3"><a  href="/top-online-stores/type/{company}">see all offers of {company}</a></div>
+						   </div>   
+                       </li>
+                       {/buydata}
+                   </ul>
+				   <a href="/top-online-stores" class="pull-right">see more</a>
+               </section>
+               </div>
+           </div>
+		   {:else}
+           <div class="row">
+
+		   <div class="col-md-2" id="place1">
+					  <div class="panel panel-default">
+						<div class="panel-body">
+					     {#data2}
+						<img src={image_source} height="60" width="120" class="img-rounded" />
+			            </br>
+						<h2 id="storeLove1" class="text-center" title="get notifications">
+							<span  value = '1' class='glyphicon glyphicon-heart '></span>
+						</h2>
+						 <div>
+						      <p><a class='btn btn-primary btn-md' href='#' target='_blank'>Shop on flipkart</a></p>
+						 </div>
+						{/data2}
+						<p>&nbsp;</p>
+
+						</div>
+					  </div>
+					  <!-- panel 1-->
+		  </div><!-- col-md-2 -->
+
+			   <div class="col-md-9">
+				   {?data1}
+				   <ul  style="list-style-type: none;">
+					 {#data1}
+					  <li>
+					   <div class="panel panel-default">
+						   <div class="panel-heading">
+									<h3 class="panel-title"> {extra_off} % extra discount on
+										--- <a title="see all {brand} offers" href="/view-by-brand/type/{brand}">
+										{brand}</a> &nbsp;&nbsp;{type}
+							   </h3>
+						   </div>
+						<div class="panel-body">
+							<div class="row">
+								<div class="col-md-11">
+
+									<ul class="list-inline">
+									 <li>
+									 <a href="/offerProfile/id/{id}">
+
+										 <img src={image_source} height="60" width="120" class="img-rounded" />
+
+									</a>
+									</li>
+									<li>
+										{plan_name}
+									</li>
+
+									</ul>
+
+								</div>
+								<div class="col-md-1">
+									<h2 class='text-right togstar'  id="storestar{id}"><span class='glyphicon glyphicon-star'></span></h2>
+								</div>
+							</div>
+						</div>
+						<div class="panel-footer">Panel footer</div>
+
+					  </div>
+					   </li>{~n}
+					 {/data1}
+					 </ul>
+				   {:else}
+				    <div class="panel panel-default">
+						<div class="panel-body">
+							{#data2}
+							<div class="row" style="margin-top:35px;margin-left:15px;margin-bottom:8px;">
+									there are  currently no buy1 get 1 offers from {store_name} ,like this brand to get all offers from {store_name}
+							</div>
+							{/data2}
+						</div>
+                    </div>
+				   {/data1}
+			   </div>
+           </div>
+           {/if}
+        </div>
+	 </div>
+ {/page-content}
+ {<script-content}
+ {?data2}
+ <script type="text/javascript" src='/js/custom/toponlinestores/toponlinestores.js'></script>
+<script>
+	{#data2}
+          var plan ="{store_name}";
+		  var id = {id} ;
+     {/data2}
+</script>
+{/data2}
+ {/script-content}

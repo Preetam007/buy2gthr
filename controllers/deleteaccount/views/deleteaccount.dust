@@ -1,0 +1,38 @@
+{>"../../../layout/layout"/}
+
+{<page-content}
+  <div class="container">
+  <div class="row" style="margin-top:60px;">
+    <div class="well col-lg-6 col-md-6 col-sm-8 col-xs-11 col-lg-offset-3 col-md-offset-3 col-sm-offset-2">
+      <form class="form-horizontal" method="POST" role="form">
+        <fieldset>
+          <legend>Delete your account</legend>
+          <div class="form-group">
+            <div class="col-lg-offset-1">
+              <div class="text-danger"></div>
+              
+            </div>
+          </div>
+          <div class="form-group">
+            <div class="col-sm-11 text-muted" style="font-size:12px;">Your logged time can not be recovered after deleting your account.</div>
+            <div class="col-sm-11">
+              <div class="input-group">
+                <span class="input-group-addon"><i class="glyphicon glyphicon-home"></i></span>
+                <input class="form-control" type="password" name="password" placeholder="Confirm your password" />
+              </div>
+            </div>
+          </div>
+          <div class="form-group">
+            <div class="col-sm-3 col-sm-offset-4">
+              <a href="/account" class="btn btn-default">Cancel</a>
+            </div>
+            <div class="col-sm-4">
+              <button type="submit" class="btn btn-primary">Delete account</button>
+            </div>
+          </div>
+        </fieldset>
+      </form>
+    </div>
+  </div>
+</div>
+{/page-content}

@@ -1,0 +1,103 @@
+    {>"../../../layout/layout"/}
+
+        {<page-content}
+      <div class="container-fluid">
+          <div class="col-md-10 col-md-offset-1">
+           <div class="row">
+               <div id ="bread">
+                  <ul class="breadcrumb">  
+                          <li>  
+                            <a href="/home">Home</a> <span class="divider">></span>  
+                          </li>   
+                          <li class="active">admin</li>  
+                  </ul>
+               </div>
+           </div>
+           <form  method="POST" >
+            <div class="row">
+               <h3><span class="glyphicon glyphicon-list-alt"></span><strong>Companies name approvals page</strong></h3>
+            </div>
+
+           <div class="row">
+
+                <div class="panel panel-default">
+                    <div class="panel-body">
+                        <table id="example"  cellpadding="0" cellspacing="0" border="0" class="datatable table table-responsive table-striped table-bordered">
+                            <thead style="background-color: hsl(190, 100%, 40%) !important;">
+                                <tr>
+                                    <th class="column" data-label="Select"><input type="checkbox" id="selectall"/></th>
+                                    <th class="column" data-label="User_id">User_id</th>
+                                    <th class="column" data-label="User_name">User_name</th>
+                                    <th class="column" data-label="Rel_name">user_city</th>
+                                    <th class="column" data-label="Rel_name">req_comp</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+
+                            </tbody>
+                        </table>  
+                     </div>
+                </div>
+            </div>
+             <div class="control-group">
+                  <label class="control-label" for="button1id">Denote your approval</label>
+                  <div class="controls">
+                       <button id="button" name="acceptbtn" class="btn btn-info btn-lg pull-left">Accept</button>
+
+                        <button id="button1" name="rejectbtn" class="btn btn-lg pull-right">Reject</button>
+
+                  </div>
+            </div>
+                <br><br>		
+        </form>	
+        <br><br>
+        <div class="row">
+               <h3><span class="glyphicon glyphicon-list-alt"></span><strong>logs of Companies name approvals </strong></h3>
+            </div>
+        <hr>
+        <div class="row">
+             <div class="panel panel-default">
+                    <div class="panel-body">
+                        <table id="activitlog"  cellpadding="0" cellspacing="0" border="0" class="datatable table table-responsive table-striped table-bordered">
+                            <thead style="background-color: hsl(190, 100%, 40%) !important;">
+                                <tr>
+                                    <th class="column" data-label="User_id">User_id</th>
+                                    <th class="column" data-label="User_name">User_name</th>
+                                    <th class="column" data-label="user_city">user_city</th>
+                                    <th class="column" data-label="old_comp_name">old_comp_name</th>
+                                    <th class="column" data-label="verified_comp_name">verified_comp_name</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+
+                            </tbody>
+                        </table>  
+                     </div>
+                </div>
+
+        </div>
+        <br>
+        <hr>	    
+         </div>  
+      </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    {/page-content}
+     {<script-content}
+         <script src='/js/custom/admin/admin.js'></script>
+         <script src='/js/datatable/ajaxreload.js'></script>
+     {/script-content}

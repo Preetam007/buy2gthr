@@ -1,0 +1,114 @@
+{>"../../../layout/layout"/}
+{<css-content}
+<link rel="stylesheet" href="/css/custom/signup/signup.css">
+ {/css-content}
+
+{<page-content}
+     <div class="container" >
+	 <div class="row text-center">  
+	     <h2>Make your shopping better ,Get all the best offer </h2>
+	 </div>
+    <div class="row">
+        <div class="col-md-10 col-md-offset-1">
+          <div class="panel panel-info">
+            <div class="panel-heading">
+              <h3 class="panel-title text-center">Register</h3>
+            </div>
+            <div class="panel-body">
+              <form method="post" class="form-horizontal" id ="myForm" role="form">
+             	    <fieldset class="step1">       
+						   <div class="form-group" id="inputName_group">
+								<label for="inputName" class="col-sm-3 control-label">Name</label>
+								<div class="col-sm-7">
+								  <input type="text" class="form-control" name = "inputName" id="inputName" placeholder="Name" required>
+<!--								  <span id="inputName_error" class="help-inline"></span>-->
+								</div>
+							 </div>
+					</fieldset>
+                     <fieldset class="step2"> 					
+							<div class="form-group" id="inputEmail_group">
+								<label for="inputEmail" class="col-sm-3 control-label">Email</label>
+								<div class="col-sm-7">
+								  <input type="email" class="form-control" name = "inputEmail" id="inputEmail" placeholder="input your Email" required>
+<!--								   <span id="inputEmail_error" class="help-inline"></span>-->
+								   <span class="help-inline">{messagm}</span>
+								</div>
+							</div>
+					 </fieldset>
+                     <fieldset class="step3"> 					 
+							<div class="form-group" id="inputPassword_group">
+								<label for="inputPassword" class="col-sm-3 control-label">Password</label>
+								<div class="col-sm-7">
+								  <input type="password" class="form-control" name = "inputPassword" id="inputPassword" placeholder="Password" maxlength ="10" required>
+<!--								   <span id="inputPassword_error" class="help-inline"></span>-->
+								</div>
+							 </div>
+					 </fieldset>
+					 <fieldset class="step4">
+							 <div style="" class="form-group" id="inputCity_group">
+									 <label class="col-md-3 control-label">Select your city</label>
+									 <div class="col-md-7">
+										 <div class="input-group"><span class="input-group-addon"><span class="glyphicon glyphicon-home"></span></span>
+											 <select name="city" id="id_city" class="form-control">
+												 <option selected="selected" value="">--</option>
+												<optgroup label="Delhi-Ncr">
+													 <option value="Delhi">Delhi</option>
+													 <option value="Gurgaon">Gurgaon</option>
+													 <option value="Noida, NY">Noida</option>
+												</optgroup>
+												<optgroup label="other">
+												     <option value="Bangalore">Bangalore</option>
+												     <option value="Pune">Pune</option>
+												     <option value="Ahmedabad">Ahmedabad</option>
+													 <option value="Goa">Goa</option>
+												     <option value="Rohtak">Rohtak</option>
+													<option value="Chandigarh">Chandigarh</option>
+												     <option value="Mohali">Mohali</option>
+													<option value="kolkata">kolkata</option>
+												     <option value="Mumbai">Mumbai</option>
+												</optgroup>
+											 </select>
+										 </div>
+<!--										 <span id="inputCity_error" class="help-inline"></span>-->
+									 </div>
+							 </div>
+                     </fieldset>
+					 <fieldset class="step5">
+						  <div  class="form-group" id="inputComp_group">
+							  <label for="inputComp" class="col-sm-3 control-label">Select your company / college name</label>
+										  <div class="col-sm-7">
+											 <div class="input-group"><span class="input-group-addon"><span class="glyphicon glyphicon-stats"></span></span>
+						<input class="form-control" autocomplete="off" type="text" name = "inputComp" id = "inputComp" placeholder="your working place">
+<!--											   <span id="inputComp_error" class="help-inline"></span>-->
+											  </div>
+										  </div>
+									    
+						   </div>   
+                    </fieldset>
+                     <fieldset class="step6"> 					 
+							  <div class="form-group" >
+								<div class="col-sm-offset-5 ">
+								  <input type="submit" class="btn btn-info" name="Register" id="Register" value="Register">
+								</div>
+				              </div>
+					 </fieldset>	 
+              </form>
+            </div>
+            <div class="panel-footer">already registered ? <a href="/login">login to continue</a></div>
+          </div>
+        </div>
+      
+    </div>
+    <div class="row">
+		<button type="button"  ID="backToTop" class="btn btn-success">
+					<span class="glyphicon glyphicon-chevron-up"></span>              
+		</button>
+	</div>
+  </div>
+ {/page-content}
+ {<script-content}
+   <script src='/js/custom/signup/signup.js'></script>
+{/script-content}
+ 
+ 
+  

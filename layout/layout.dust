@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html>
+<head>   
+<meta http-equiv="Content-Type" content="text/html; charset="utf-8"/>
+  <title> buyTogether - india's first group shopping site</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="">
+   <meta content="utf-8" http-equiv="encoding"/>
+  <link rel="stylesheet" href="/css/bootstrap.min.css">
+  <link rel="stylesheet" href="/css/bootstrap-theme.min.css">
+  <link rel="stylesheet" href="/css/layout.css">
+  <link rel="stylesheet" href="/css/font-awesome-4.2.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="/css/typeahead.css"></link>
+  <link rel="stylesheet" href="/css/datatable/datatable.bootstrap.css"></link>
+  <link rel="stylesheet" href="/css/bootstrap3-editable/bootstrap-editable.css"></link>
+  <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.min.css"> 
+  <link rel="stylesheet" href="/js/tooltip/tipped-4.2.1-light/css/tipped/tipped.css">
+  <link rel="stylesheet" href="/js/noty/css/animate.min.css"> 																      <link rel="shortcut icon" type="image/x-icon" href="/images/favicon.ico" />		 
+																					 
+																							
+																								
+  {+css-content}
+  {/css-content}
+  
+  
+  
+
+</head>
+  <body>
+  <div class="container-fluid" >
+  <div id="header-wrap" >
+	<div id="navbar1">
+      <nav class="navbar navbar-default" role="navigation">
+		  <div class="container " style="background: rgba(255,255,255,.9)";>
+		    <!-- Brand and toggle get grouped for better mobile display -->
+		    <div class="navbar-header">
+		      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+		        <span class="sr-only">Toggle navigation</span>
+		        <span class="icon-bar"></span>
+		        <span class="icon-bar"></span>
+		        <span class="icon-bar"></span>
+		      </button>
+		      <a class="navbar-brand" href="/home">
+			   <img width="120" class='img-rounded' height="70"  src="/images/logo.png">
+			</a>
+		    </div>
+		
+		    <!-- Collect the nav links, forms, and other content for toggling -->
+		    <div class="collapse navbar-collapse " id="bs-example-navbar-collapse-1">
+		      <form class="navbar-form navbar-left " role="search">
+		        <div class="form-group">
+					  <div class="input-group">
+											<span class="input-group-addon"><span class="glyphicon glyphicon-search"></span></span>
+											<input type="text" class="form-control" placeholder="search for extra offers">
+					  </div>
+		        </div>
+				
+		        <button type="submit" class="btn btn-info">Search</button>
+		      </form>
+		      <ul class="nav navbar-nav navbar-right">
+				 {?messagm}
+				    <li class="dropdown">
+                    <a class="dropdown-toggle"  data-hover="dropdown" href="#">
+                        <span class="glyphicon glyphicon-bell"></span><span class="badge" title ="you have one notification" style="background-color:red" >1+</span>
+                    </a>
+                    <ul class="dropdown-menu dropdown-alerts" style="width: 310px">
+                        <li>
+                            <a href="/comments">
+                                <div style="white-space: normal">
+                                   <span class="glyphicon glyphicon-comment"></span> New Msg
+                                    <span class="pull-right text-muted small">4 minutes ago</span>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="divider"></li>
+                        <li>
+                            <a href="/followers">
+                                <div>
+                                    <span class="glyphicon glyphicon-user"></span> 3 New Followers
+                                    <span class="pull-right text-muted small">12 minutes ago</span>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="divider"></li>
+                        <li>
+                            <a href="/newcompany-mates">
+                                <div>
+                                    <span class="glyphicon glyphicon-record"></span>your company mates  
+                                    <span class="pull-right text-muted small">4 minutes ago</span>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="divider"></li>
+                        <li>
+                            <a href="#">
+                                <div>
+                                    <span class="glyphicon glyphicon-road"></span> city mates 
+                                    <span class="pull-right text-muted small">4 minutes ago</span>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="divider"></li>
+                        <li>
+                            <a class="text-center" href="/alerts">
+                                <strong>See All Alerts</strong>
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+                        </li>
+                    </ul>
+                    <!-- /.dropdown-alerts -->
+                </li>
+                <li class="dropdown ">
+		              <a class="btn dropdown-toggle" data-toggle="dropdown" data-hover="dropdown"  id="userId"  data-target="#">
+		                  <span class="glyphicon glyphicon-th-large"></span>{email}<b class="caret"></b>
+		                         
+		              </a>
+		              <ul class="dropdown-menu" role="menu">
+		                <li role="presentation" class="active">
+		                  <a role="menuitem" href="/userProfile"> User profile</a>
+		                </li>
+		                <li role="presentation">
+		                  <a role="menuitem" href="/account/"> Privacy Setting</a>
+		                </li>
+		                <li role="presentation">
+		                  <a role="menuitem" class="btn btn-info" href="/post_a_offer">Post a offer</a>
+		                </li>
+		                <li role="presentation" class="divider"></li>
+		                <li role="presentation">
+		                  <a role="menuitem" href="/logout" id="logout"> Log Out</a>
+		                </li>
+		              </ul>
+                 </li>
+				 {:else}
+		         <li><a  href="/login" style="margin-top:10px" class="btn btn-info" ><span class="glyphicon glyphicon-user"></span>login</a></li>
+				<li><a  href="/signup"  style="margin-top:10px" ><i class="fa fa-cogs"></i>Register</a></li>
+		        {/messagm}
+		      </ul>
+		    </div><!-- /.navbar-collapse -->
+		  </div><!-- /.container-fluid -->
+       </nav>
+	 </div>
+    </div>
+   {?messagm}	
+          <nav class="navbar navbar-default"  id="navbar2"  role="navigation">
+		  <div class="container" >   
+			<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-2">
+			  <ul class="nav navbar-nav navbar-left"  >
+			  <li class="dropdown" >		
+					<a href="/top-online-stores" class="dropdown-toggle js-activated" data-hover="dropdown" >top online stores<b class="caret"></b></a>
+					<ul class="dropdown-menu">
+					  <li>
+					  <a href="/top-online-stores/type/flipkart">Flipkart</a></li>
+					  <li><a href="/top-online-stores/type/Snapdeal">Snapdeal</a></li>
+					  <li><a href="/top-online-stores/type/amazon">amazon</a></li>
+					  <li><a href="/top-online-stores/type/Jabong">Jabong</a></li> 
+                       <li><a href="/top-online-stores/type/yep.me">yepMe</a></li>                                        
+					</ul>
+				 </li>
+				 
+				 <li class="dropdown">
+					<a href="/view-by-category" class="dropdown-toggle js-activated" data-hover="dropdown" >view by category<b class="caret"></b></a>
+					<ul class="dropdown-menu">
+					  <li><a href="/view-by-category/type/fashion">fashion</a></li>
+					  <li><a href="/view-by-category/type/Mobiles&Tablets">Mobiles&Tablets</a></li>
+					  <li><a href="/view-by-category/type/Cameras&Accessories">Cameras & Accessories</a></li>
+					  <li><a href="/view-by-category/type/Beauty&Health">Beauty & Health</a></li>
+					  <li><a href="/view-by-category/type/Automotive">Automotive</a></li>
+					  <li><a href="/view-by-category/type/Mobiles&Tablets">Education and learning</a></li>
+					  <li><a href="/view-by-category/type/Travel">Travel</a></li>
+					  <li><a href="/view-by-category/type/Computer_laptop_and_gaming">Computer laptop and gaming</a></li>
+					  <li><a href="/view-by-category/type/Appliances">Appliances</a></li>
+					  <li><a href="/view-by-category/type/Sports_Fitness">Sports & Fitness</a></li>
+					  <li><a href="/view-by-category/type/kids_babies_and_toys">kids babies and toys</a></li>
+					  <li><a href="/view-by-category/type/Jewellery">Jewellery</a></li>
+					</ul>
+				 </li>
+				 <li class="dropdown">
+					<a href="/hot-offers" class="dropdown-toggle js-activated" data-hover="dropdown">Hot offers<b class="caret"></b></a>
+					<ul class="dropdown-menu">
+					  <li><a href="#">Flipkart</a></li>
+					  <li><a href="#">Myntra</a></li>
+					  <li><a href="#">Amazon</a></li>
+					  <li><a href="#">JAbong</a></li>
+					  <li><a href="#">Snapdeal</a></li>
+					</ul>
+				 </li> 
+				 
+				 <li class="dropdown">
+					<a href="/latest-offers" class="dropdown-toggle js-activated" data-hover="dropdown">latest offers <b class="caret"></b></a>
+					<ul class="dropdown-menu">
+					  <li><a href="#">Fashion and Appearls</a></li>
+					  <li><a href="#">Electronics</a></li>
+					  <li><a href="#">Travel coupns</a></li>
+					   <li><a href="#">Jewellary coupns</a></li>
+					  <li><a href="#">ONLINE EDUCATION </a></li>    
+					</ul>
+				 </li>
+				 <li class="dropdown">
+					<a href="/view-by-brand" class="dropdown-toggle js-activated" data-hover="dropdown">view by brand<b class="caret"></b></a>
+					<ul class="dropdown-menu">
+					  <li><a href="/view-by-brand/type/nike">Nike</a></li>
+					  <li><a href="/view-by-brand/type/puma">Puma</a></li>
+					  <li><a href="/view-by-brand/type/Adidas">Adidas</a></li>
+					  <li><a href="/view-by-brand/type/Zara">Zara</a></li>
+					   <li><a href="/view-by-brand/type/Mango">Mango</a></li>
+					  <li><a href="/view-by-brand/type/killer">killer</a></li> 
+					<li><a href="/view-by-brand/type/mtv">mtv</a></li>  
+					<li><a href="/view-by-brand/type/myntra">myntra</a></li>  
+					<li><a href="/view-by-brand/type/red_chief">red_chief</a></li>  					  
+					</ul>
+				 </li>
+				 <li class="dropdown">
+					<a href="#" class="dropdown-toggle js-activated" data-hover="dropdown">Categories <b class="caret"></b></a>
+					<ul class="dropdown-menu">
+					  <li><a href="#">Fashion and Appearls</a></li>
+					  <li><a href="#">Electronics</a></li>
+					  <li><a href="#">Travel coupns</a></li>
+					   <li><a href="#">Jewellary coupns</a></li>
+					  <li><a href="#">ONLINE EDUCATION </a></li>    
+					</ul>
+				 </li>
+				 
+			  </ul>   
+			<ul class="nav navbar-nav navbar-right">
+			   <li ><a href="/restraunts">restraunts offers</a></li>
+			  <li ><a href="/buy1get1"> buy 1 get 1 free </a></li>
+			 </ul>						  
+			</div><!-- /.navbar-collapse -->
+		  </div><!-- /.container-fluid -->
+		</nav>  
+  
+{/messagm}
+     {+page-content}
+     {/page-content}
+     <div>
+		<nav>
+		  <ul class="pagination">
+			<li>
+			  <a href="#" aria-label="Previous">
+				<span aria-hidden="true">&laquo;</span>
+			  </a>
+			</li>
+			<li><a href="#">1</a></li>
+			<li><a href="#">2</a></li>
+			<li><a href="#">3</a></li>
+			<li><a href="#">4</a></li>
+			<li><a href="#">5</a></li>
+			<li>
+			  <a href="#" aria-label="Next">
+				<span aria-hidden="true">&raquo;</span>
+			  </a>
+			</li>
+		  </ul>
+		</nav>
+</div>
+	
+     <div class="container">
+	     <hr>
+	     <footer>
+		    <div class="panel panel-default">
+				 <div class="panel-body">
+					<div class="row">
+						 <div class="col-md-4">
+							 <h4> we are here Happy to help you</h4>
+							 <p><a href="raopreetam007@outlook.com"><span  style="margin-right:3px" class="glyphicon glyphicon-envelope"></span>raopreetam007@outlook.com</a></p>
+							 <p><a href="tel:8800420096"><span style="margin-right:2px" class="glyphicon glyphicon-earphone"></span>880-042-0096</a></p>
+							 <p><a href="/faq">faq</a></p>
+						 </div>
+						 <div class="col-md-3 col-md-offset-1">
+							  <h4> on the web</h4>
+							  <p><a href="www.facebook.com/buyTogether">facebook</a></p>
+							  <p><a href="www.google.com/buyTogether">google+</a></p>
+							  <p><a href="www.twitter.com/buyTogether">twitter</a></p>
+						 </div>
+						 <div class="col-md-2 col-md-offset-1">
+							  <h4> careers</h4>
+							  <p><a href="www.facebook.com/buyTogether">we are hiring</a></p>
+							  <p><a href="www.google.com/buyTogether">our team</a></p>
+							  <p><a href="www.twitter.com/buyTogether">twitter</a></p>
+						 </div>
+			        </div>  
+				 </div>
+			</div>
+	    </footer>
+    </div>
+	
+    <script src="/js/hogan/hogan.js"></script>
+  <script type="text/javascript" src="js/jquery.min.js"></script>
+  <script type="text/javascript" src="/js/ajax.jquery.js"></script>
+  <script type="text/javascript" src="/js/ajaxjquery.min.js"></script>
+  <script src="/js/bootstrap.min.js"></script>
+  <script src="/js/bootstrap-hover-dropdown.js"></script>
+  <script src="/js/layout.js"></script>
+  <script src="/js/datatable/datatable.min.js"></script>
+  
+  <script src="/js/bootstrap3-editable/bootstrap-editable.min.js"></script>
+  <script src="/js/datatable/datatable.bootstrap.js"></script>
+ 
+  
+  <script src="/js/typeahead/typeahead.jquery.min.js"></script>
+  <script src="/js/tooltip/tipped-4.2.1-light/js/tipped/tipped.js"></script>
+   <script src="https://togetherjs.com/togetherjs-min.js"></script>
+   <script type="text/javascript" src="/js/noty/packaged/jquery.noty.packaged.min.js"></script>
+    <script type="text/javascript" src="/js/jquery_form/jquery.form.min.js"></script>
+
+    {+script-content}
+    {/script-content}
+	</div>
+  </body>
+</html>

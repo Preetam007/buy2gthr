@@ -1,0 +1,12 @@
+{>"../../../layout/layout"/}
+{<css-content}
+<link rel="stylesheet" href="/css/bootstrap-multislect/multiple_select.css">
+ {/css-content}
+{<page-content}
+<div class="container">
+	  
+</div>
+{/page-content}
+{<script-content}
+     <script src='/js/custom/privacy/privacy.js'></script>
+ {/script-content}

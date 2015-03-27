@@ -1,0 +1,63 @@
+{>"../../../layout/layout"/}
+{<page-content}
+<div class="container">
+	  <div class="row">
+		   <div class="col-md-3">
+			    <div class="panel panel-default">
+					<div class="panel-heading">
+					    Settings
+					</div>
+				  <div class="panel-body">
+						  <ul class="nav nav-pills nav-stacked">
+							<li ><a href="/account">Account</a></li>
+							<li ><a href="/privacy">Privacy</a></li>
+							<li><a href="/preferences">Preferences</a></li>
+							<li class="active"><a href="/network">network settings</a></li>
+						</ul>
+				  </div>
+			     </div>
+	        </div>
+		    <div class="col-md-9">
+				 <div class="panel-group" id="accordion">
+					  <div class="panel panel-default">
+						<div class="panel-heading">
+						  <h4 class="panel-title">
+							<a data-toggle="collapse" data-parent="#accordion" 
+							  href="#collapseOne">
+							  Click me to exapand. Click me again to collapse.Section 1
+							</a>
+						  </h4>
+						</div>
+						<div id="collapseOne" class="panel-collapse collapse">
+						  <div class="panel-body">
+							Nihil anim keffiyeh helvetica, craft beer labore wes anderson 
+							cred nesciunt sapiente ea proident. Ad vegan excepteur butcher 
+							vice lomo.
+						  </div>
+						</div>
+					  </div>
+					  <div class="panel panel-default">
+						<div class="panel-heading">
+						  <h4 class="panel-title">
+							<a data-toggle="collapse" data-parent="#accordion" 
+							  href="#collapseTwo">
+							  Click me to exapand. Click me again to collapse.Section 2
+							</a>
+						  </h4>
+						</div>
+						<div id="collapseTwo" class="panel-collapse collapse">
+						  <div class="panel-body">
+							Nihil anim keffiyeh helvetica, craft beer labore wes anderson 
+							cred nesciunt sapiente ea proident. Ad vegan excepteur butcher 
+							vice lomo.
+						  </div>
+						</div>
+					  </div>
+                   </div>	
+		      </div>
+      </div>
+</div>
+{/page-content}
+{<script-content}
+     <script src='/js/custom/network/network.js'></script>
+ {/script-content}

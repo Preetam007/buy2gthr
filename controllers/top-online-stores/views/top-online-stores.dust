@@ -1,0 +1,171 @@
+{>"../../../layout/layout"/}
+{<css-content}
+<link rel="stylesheet/less" href="/less/toponlinestores/stores.less" type="text/css">
+<link rel="stylesheet" href="/css/custom/onlinestores/store.css"></link>
+<link rel="stylesheet" href="/js/sweetalert/sweetalert.min.css"></link>
+ {/css-content}
+{<page-content}
+     <div class="container-fluid">
+       <div class="col-md-10 col-md-offset-1">
+           <div class="row">
+               <div id ="bread">
+                  <ul class="breadcrumb">
+                         <li>
+                            <a href="/home">Home</a> <span class="divider">></span>
+                         </li>
+                         {@if cond="(('{store}'== 'all'))"}
+                          <li class="active">toponlineStores</li>
+                         {:else}
+						  <li>
+							  <a href="/top-online-stores">toponlineStores</a> <span class="divider">></span>
+						  </li>
+						 <li class="active">{store}</li>
+                         {/if}
+                  </ul>
+               </div>
+           </div>
+           {@if cond="(('{store}'== 'all'))"}
+           <div class="row">
+               <div align='center'>
+                   <h3> <strong>TOP ONLINE SHOPPING STORES</strong></h3>
+                   <h5>Stores listed in alphabetical ORDER
+					&nbsp;/&nbsp;<a href="#a-d">A - D</a>
+					&nbsp;/&nbsp;<a href="#e-l">E - L</a>
+					&nbsp;/&nbsp;<a href="#m-p">M - P</a>
+					&nbsp;/&nbsp;<a href="#q-z">Q - Z</a>
+	               </h5>
+                   <hr>
+				   <section style="background:#838383;border:1px dotted black;">
+					   <h2 id="a-d">A-D</h2>
+					   <ul class="list-inline"  >
+						   {#data}
+						   <li>
+								<a  href="/top-online-stores/type/{tag_line}">
+								   <img width="120" class='img-rounded' height="70" alt="2go ACTIVE GEAR USA"  src={image_source}>
+								</a>
+
+						   </li>
+						   {/data}
+					   </ul>
+				   </section>
+               </div>
+           </div>
+		   {:else}
+           <div class="row">
+
+		   <div class="col-md-2" id="place1">
+					  <div class="panel panel-default">
+						<div class="panel-body">
+					     {#data2}
+						<img src={image_source} height="60" width="120" class="img-rounded" />
+			            </br>
+						<h2 id="storeLove1" class="text-center" title="get notifications on this brand">
+							<span  value = '1' class='glyphicon glyphicon-heart '></span>
+						</h2>
+						 <div>
+						      <p><a class='btn btn-primary btn-md' href='{link}' target='_blank'>Shop on {store}</a></p>
+						 </div>
+						{/data2}
+						<p>&nbsp;</p>
+
+						</div>
+					  </div>
+					  <!-- panel 1-->
+		  </div><!-- col-md-2 -->
+
+			   <div class="col-md-9">
+				    <div class="controls">
+						  <label>Filter:</label>
+
+						  <button class="filter" data-filter="all">All</button>
+						  <button class="filter" data-filter=".category-0">offers</button>
+						  <button class="filter" data-filter=".category-1">buy1get1</button>
+
+						  <label>Sort:</label>
+
+						  <button class="sort" data-sort="myorder:asc"> price Asc</button>
+						  <button class="sort" data-sort="myorder:desc"> price Desc</button>
+		          </div>
+				   {?data1}
+				   <ul  style="list-style-type: none;">
+					  <div id="Container" class="container">
+							 {#data1}
+							  <li>
+								  
+								  
+							   <div class=" mix category-{buy1get1} panel panel-default">
+								   <div class="panel-heading">
+											<h3 class="panel-title"> {extra_off} % extra discount on
+												--- <a title="see all {brand} offers" href="/view-by-brand/type/{brand}">
+												{brand}</a> &nbsp;&nbsp;{type}
+									        </h3>
+								   </div>
+								<div class="panel-body">
+									<div class="row">
+										<div class="col-md-11">
+
+											<ul class="list-inline">
+											 <li>
+											 <a href="/offerProfile/id/{id}">
+
+												 <img src={image_source} height="60" width="120" class="img-rounded" />
+
+											</a>
+											</li>
+											<li>
+												{plan_name}
+											</li>
+
+											</ul>
+
+										</div>
+										<div class="col-md-1">
+											<h2 class='text-right togstar' title='will be get notified ,If any body interested in yhis offer' id="storestar{id}"><span value = '{offer_love}' 
+											{@if cond="({offer_love} == '1')"} 
+											class='glyphicon  glyphicon-star' 
+											{:else} 
+											class='glyphicon  glyphicon-star-empty'
+											{/if} ></span></h2>
+										</div>
+									</div>
+								</div>
+								<div class="panel-footer">Panel footer</div>
+
+							  </div>
+							   </li>{~n}
+							 {/data1}
+						   </div>
+					 </ul>
+				   {:else}
+				    <div class="panel panel-default">
+						<div class="panel-body">
+							{#data2}
+							<div class="row" style="margin-top:35px;margin-left:15px;margin-bottom:8px;">
+									there are  currently no offers from {store_name} ,like this brand to get all offers from {store_name}
+							</div>
+							{/data2}
+						</div>
+                    </div>
+				   {/data1}
+			   </div>
+           </div>
+           {/if}
+         </div>
+	 </div>
+
+        
+	    
+ {/page-content}
+ {<script-content}
+ {?data2}
+ <script type="text/javascript" src='/js/custom/toponlinestores/toponlinestores.js'></script>
+<script type="text/javascript" src='/js/mixitup-master/build/jquery.mixitup.min.js'></script>
+<script type="text/javascript" src='/js/sweetalert/sweetalert.min.js'></script>
+<script>
+	{#data2}
+          var plan ="{store_name}";
+		  var id = {id} ;
+     {/data2}
+</script>
+{/data2}
+ {/script-content}

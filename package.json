@@ -1,0 +1,31 @@
+{
+  "name": "buyIndia",
+  "description": "abc",
+  "version": "0.0.1",
+  "private": true,
+  "dependencies": {
+    "bcrypt-nodejs": "*",
+    "connect-mysql": "*",
+    "consolidate": "*",
+    "dust": "*",
+    "dustjs-helpers": "*",
+    "dustjs-linkedin": "*",
+    "elastic.js": "1.0.0",
+    "express": "3.1.2",
+    "geoip-lite": "*",
+    "jade": "*",
+    "knox": "*",
+    "minify": "^1.4.8",
+    "moment": "*",
+    "mysql": "*",
+    "node-rest-client": "*",
+    "node-uuid": "*",
+    "nodemailer": "*",
+    "nodemon": "*",
+    "rabbit.js": "*",
+    "request": "*",
+    "string": "*",
+    "twitter": "*",
+    "url": "*"
+  }
+}

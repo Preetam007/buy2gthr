@@ -1,0 +1,148 @@
+{>"../../../layout/layout"/}
+{<css-content}
+    <link rel="stylesheet" href="/css/bootstrap-multislect/multiple_select.css">
+ {/css-content}
+{<page-content}
+<div class="container">
+	  <div class="row">
+		   <div class="col-md-3">
+			    <div class="panel panel-default">
+					<div class="panel-heading">
+					    Settings
+					</div>
+				  <div class="panel-body">
+						  <ul class="nav nav-pills nav-stacked">
+							<li ><a href="/account">Account</a></li>
+							<li ><a href="/privacy">privacy</a></li>
+							<li class="active"><a href="#">Preferences</a></li>
+							<li><a href="/network">network settings</a></li> 
+						</ul>
+				  </div>
+			     </div>
+	        </div>
+		    <div class="col-md-9">
+				 
+				 <div class="panel panel-default">
+					<div class="panel-heading">
+					 edit your preferences
+					</div>
+					  <div class="panel-body">
+                            <div class="row">
+								<div class="col-sm-5">
+									notify me when my bestie interseted in any offer
+								</div>
+								 <div  class="col-sm-3">
+									   <select multiple="multiple" id="mates">
+											<option value="1">company mates</option>
+											<option value="2" >city mates</option>
+											<option value="12" >local mates</option>
+										</select>
+								 </div>
+								 <div class="col-sm-1">
+								  <span class="follow-tooltip fa fa-info-circle fa-lg" title= "choose who can follow" ></span>
+								</div>
+								
+								<!--<ul>
+									<li>notify me when my</li>
+									<li><select multiple="multiple">
+											<option value="1">company mates</option>
+											<option value="12" >city mates</option>
+											<option value="12" >local mates</option>
+										</select>
+									</li>
+									<li>interseted in any offer</li>
+									<li><i class="fa fa-info-circle fa-lg"></i></</li>
+									
+									
+								</ul>-->
+					         </div>
+						  <hr width=75%  align="center">
+							  <div class="row" style="margin-top: 10px;" >
+								    <div class="col-sm-5">
+									   notify me when there is any offer from
+								    </div>
+									 <div  class="col-md-3">
+										   <select multiple="multiple" id="stores">
+												<option value="1">flipkart</option>
+												<option value="12" >amazon</option>
+												<option value="12" >Snapdeal</option>
+											    <option value="1">myntra</option>
+												<option value="12" >jabong</option>
+												<option value="12" >urbanladder</option>
+											    <option value="1">bewkoof</option>
+												<option value="12" >zovi</option>
+												<option value="12" >yebhi</option>
+											    <option value="1">lenskart</option>
+												<option value="12" >homeshop18</option>
+												<option value="12" >shopping indiatimes</option>
+											    <option value="1">ebay</option>
+												<option value="12" >tradus</option>
+												<option value="12" >infibeam</option>
+											    <option value="1">fashionandYou</option>
+												<option value="12" >yepme</option>
+												<option value="12" >firstcry</option>
+											    <option value="1">bluestome</option>
+												<option value="12" >babyoye</option>
+												
+											</select>
+									 </div>
+									<div class="col-sm-1">
+								  <span class="store-tooltip fa fa-info-circle fa-lg" title= "notify me when there is any offer from"></span>
+								</div>
+							 </div>
+						  <hr width=75%  align="center">
+							<div class="row" style="margin-top: 10px;" >
+								<div class="col-sm-5">
+								   notify me when there is any offer from brands
+								</div>
+								 <div  class="col-sm-3">
+									   <select multiple="multiple" id="stores1">
+											<option value="1">puma</option>
+											<option value="12" >nike</option>
+											<option value="12" >adidas</option>
+											<option value="1">reebok</option>
+											<option value="12" >van heusen</option>
+											<option value="12" >louis philipe</option>
+											<option value="1">lewis</option>
+											<option value="12" >wrogn</option>
+											<option value="12" >zara</option>
+											<option value="1">mango</option>
+											<option value="12" >killer</option>
+											<option value="12" >mtv</option>
+											<option value="1">red chief</option>
+											<option value="12" >tradus</option>
+											<option value="12" >infibeam</option>
+											<option value="1">fashionandYou</option>
+											<option value="12" >yepme</option>
+											<option value="12" >firstcry</option>
+											<option value="1">bluestome</option>
+											<option value="12" >babyoye</option>
+
+										</select>
+								 </div>
+								 <div class="col-sm-1">
+								  <span class="brands-tooltip fa fa-info-circle fa-lg" title= "notify me when there is any offer from bands" ></span>
+								</div>
+						   </div>
+						  <hr width=75%  align="center">
+						   <div class="row" style="margin-top: 10px;">
+							   <div class="col-sm-offset-4 col-sm-2">
+							           <button id="save"  class="btn btn-success" >Save</button>
+							   </div> 
+						  </div>     
+					  </div>
+				</div>
+		    </div>
+      </div>
+</div>
+{/page-content}
+{<script-content}
+     <script src='/js/custom/preferences/preferences.js'></script>
+     <script src="/js/bootstrap-multiselect/multiple_select.js"></script>
+     <script>
+        $('#stores,#stores1').multipleSelect({
+		 filter: true
+		});
+		 $('#mates').multipleSelect();
+     </script>
+ {/script-content}

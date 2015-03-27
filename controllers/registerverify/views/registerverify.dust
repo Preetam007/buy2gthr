@@ -1,0 +1,11 @@
+{>"../../../layout/layout"/}
+
+{<page-content}
+
+<div class="container">
+	
+	<div class="well well-sm" >
+		{message}
+	</div>	
+</div>	
+{/page-content}

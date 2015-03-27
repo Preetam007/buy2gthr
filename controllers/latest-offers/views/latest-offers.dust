@@ -1,0 +1,11 @@
+{>"../../../layout/layout"/}
+{<css-content}
+<link rel="stylesheet" href="/css/custom/signup/signup.css">
+ {/css-content}
+
+{<page-content}
+
+ {/page-content}
+ {<script-content}
+   <script src='/js/custom/signup/signup.js'></script>
+{/script-content}

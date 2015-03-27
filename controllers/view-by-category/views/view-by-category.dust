@@ -1,0 +1,29 @@
+{>"../../../layout/layout"/}
+
+{<page-content}
+     <div class="container-fluid">
+		 <div class="col-md-10 col-md-offset-1"> 
+		   <div class="row">
+			   <div id ="bread">
+				  <ul class="breadcrumb">  
+						  <li>  
+							<a href="/home">Home</a> <span class="divider">></span>  
+						  </li> 
+						 {@if cond="(('{type}'== 'all'))"}
+						  <li class="active">viewbycategory</li>
+						 {:else}
+							  <li>
+								  <a href="/view-by-category">viewbycategory</a> <span class="divider">></span> 
+							  </li>
+							 <li class="active">{type}</li>
+						  {/if}     
+				  </ul>
+			   </div>
+		   </div>
+		 </div>
+	 </div>
+ {/page-content}
+ {<script-content}
+     <script src='/js/custom/toponlinestores/toponlinestores.js'></script>
+ {/script-content}
+  

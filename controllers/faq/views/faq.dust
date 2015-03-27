@@ -1,0 +1,9 @@
+{>"../../../layout/layout"/}
+
+{<page-content}
+      <div class="container" style="margin-top:69px" >
+	        <div class="row">
+	            <div class="col-md-2 col-md-offset-4">FAQ by users</div>
+	        </div>
+      </div>
+ {/page-content}    

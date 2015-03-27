@@ -1,0 +1,121 @@
+{>"../../../layout/layout"/}
+{<css-content}
+<link rel="stylesheet" href="/css/custom/home/home.css">
+<link rel="stylesheet" href="/css/bootstrap_vertical_tab/bootstrap.vertical-tabs.min.css">
+ {/css-content}
+ 
+{<page-content}   
+     <div  class="container-fluid">
+		 <div class="row">  <p id="demo"></p>   </div>
+		<div class="row">
+		     <div class="col-md-2">
+			     <ul class="nav nav-tabs tabs-left" role="tablist">
+					  <li class="active"><a href="#Flipkart"  role="tab" data-toggle="tab">Flipkart</a></li>
+					  <li><a href="#Snapdeal" role="tab" data-toggle="tab">Snapdeal</a></li>
+					  <li><a href="#Amazon"  role="tab"  data-toggle="tab">Amazon</a></li>
+					  <li><a href="#Myntra"  role="tab" data-toggle="tab">Myntra</a></li>
+					  <li><a href="#Jabong" role="tab" data-toggle="tab">Jabong</a></li>
+					  <li><a href="#FabFurnish"  role="tab" data-toggle="tab">FabFurnish</a></li>
+					  <li><a href="#Zovi"  role="tab" data-toggle="tab">Zovi</a></li>
+					  <li><a href="#Yebhi"  role="tab" data-toggle="tab">Yebhi</a></li>
+					  <li><a href="#Junglee"  role="tab" data-toggle="tab">Junglee</a></li>
+					  <li><a href="#Tradus"  role="tab" data-toggle="tab">Tradus</a></li>
+					  <li><a href="#HealthKart" role="tab" data-toggle="tab">HealthKart</a></li>
+					  <li><a href="#LensKart"  role="tab" data-toggle="tab">LensKart</a></li>
+					  <li><a href="#Zivame"  role="tab" data-toggle="tab">Zivame</a></li>
+					  <li><a href="#FirstCry"  role="tab" data-toggle="tab">FirstCry</a></li>
+					  <li><a href="#Pepperfry"  role="tab" data-toggle="tab">Pepperfry</a></li>
+<!--
+					  <li><a href="#YepMe"  role="tab" data-toggle="tab">YepMe</a></li>
+					  <li><a href="#YepMe"  role="tab" data-toggle="tab">YepMe</a></li>
+					  <li><a href="#YepMe"  role="tab" data-toggle="tab">YepMe</a></li>
+-->
+			
+                 </ul> 
+			 
+			 </div>
+			 <div class="col-md-9">
+			             <!-- Tab panes -->
+				<div class="tab-content">
+					  <div class="tab-pane active" id="Flipkart">
+							<div class="row" id="FlipkartPanel" >
+							</div> 
+					  </div>
+					  <div class="tab-pane" id="Snapdeal">
+							<div class="row" id="SnapdealPanel" >
+							</div> 
+					  </div>
+					  <div class="tab-pane " id="Amazon">
+							<div class="row" id="AmazonPanel" >
+							</div>
+					  </div>
+					  <div class="tab-pane" id="Myntra">
+							<div class="row" id="MyntraPanel" >
+							</div>
+					  </div>
+					  <div class="tab-pane" id="Jabong">
+						   <div class="row" id="JabongPanel" >
+							</div>
+					  </div>
+					  <div class="tab-pane" id="FabFurnish">
+							<div class="row" id="FabFurnishPanel" >
+							</div>
+					   </div>
+					   <div class="tab-pane" id="Zovi">
+							<div class="row" id="ZoviPanel" >
+							</div>
+					   </div>
+					   <div class="tab-pane" id="Yebhi">
+						   <div class="row" id="YebhiPanel" >
+							</div>
+					   </div>
+					   <div class="tab-pane" id="Junglee">
+							<div class="row" id="JungleePanel" >
+							</div>
+					   </div>
+					   <div class="tab-pane" id="Tradus">
+							<div class="row" id="TradusPanel" >
+							</div>
+					   </div>
+					   <div class="tab-pane" id="HealthKart">
+							 <div class="row" id="HealthKartPanel" >
+							</div>
+					   </div>
+					   <div class="tab-pane" id="LensKart">
+							  <div class="row" id="LensKartPanel" >
+							  </div>
+					   </div>
+					   <div class="tab-pane" id="YepMe">
+							  <div class="row" id="YepMePanel" >
+							  </div>
+					   </div> 
+					   <div class="tab-pane" id="Zivame">
+							  <div class="row" id="ZivamePanel" >
+							  </div>
+					   </div>
+					   <div class="tab-pane" id="FirstCry">
+							  <div class="row" id="FirstCryPanel" >
+							  </div>
+					   </div>
+					   <div class="tab-pane" id="Pepperfry">
+							  <div class="row" id="PepperfryPanel" >
+							  </div>
+					   </div>
+				</div> <!-- Tab panes -->  
+			 
+			 </div>
+			 
+			 
+		       
+		 </div>
+    </div><!--container fluid -->
+
+ {/page-content} 
+ {<script-content}
+  
+<!--   <script src='/js/minify_js/home/home-min.js'></script>-->
+ 
+ <script src='/js/custom/home/home.js'></script>
+ <script src='/js/lazy-load/lazy_load.min.js'></script>
+{/script-content}
+ 

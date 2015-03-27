@@ -1,0 +1,17 @@
+{
+  "name": "buyTogether",
+  "main": "index.js",
+  "version": "0.0.0",
+  "moduleType": [
+    "amd",
+    "node"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
