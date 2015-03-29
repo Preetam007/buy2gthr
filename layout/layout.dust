@@ -2,7 +2,9 @@
 <html>
 <head>   
 <meta http-equiv="Content-Type" content="text/html; charset="utf-8"/>
-  <title> buyTogether - india's first group shopping site</title>
+	{+title-content}
+	{/title-content}
+<!--  <title> buyTogether - india's first group shopping site</title>-->
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="">
    <meta content="utf-8" http-equiv="encoding"/>
@@ -15,16 +17,9 @@
   <link rel="stylesheet" href="/css/bootstrap3-editable/bootstrap-editable.css"></link>
   <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.min.css"> 
   <link rel="stylesheet" href="/js/tooltip/tipped-4.2.1-light/css/tipped/tipped.css">
-  <link rel="stylesheet" href="/js/noty/css/animate.min.css"> 																      <link rel="shortcut icon" type="image/x-icon" href="/images/favicon.ico" />		 
-																					 
-																							
-																								
+  <link rel="stylesheet" href="/js/noty/css/animate.min.css"> 																      <link rel="shortcut icon" type="image/x-icon" href="/images/favicon.ico" />																						
   {+css-content}
   {/css-content}
-  
-  
-  
-
 </head>
   <body>
   <div class="container-fluid" >
@@ -284,7 +279,7 @@
 	    </footer>
     </div>
 	
-    <script src="/js/hogan/hogan.js"></script>
+  <script src="/js/hogan/hogan.js"></script>
   <script type="text/javascript" src="js/jquery.min.js"></script>
   <script type="text/javascript" src="/js/ajax.jquery.js"></script>
   <script type="text/javascript" src="/js/ajaxjquery.min.js"></script>
@@ -299,9 +294,8 @@
   
   <script src="/js/typeahead/typeahead.jquery.min.js"></script>
   <script src="/js/tooltip/tipped-4.2.1-light/js/tipped/tipped.js"></script>
-   <script src="https://togetherjs.com/togetherjs-min.js"></script>
-   <script type="text/javascript" src="/js/noty/packaged/jquery.noty.packaged.min.js"></script>
-    <script type="text/javascript" src="/js/jquery_form/jquery.form.min.js"></script>
+  <script type="text/javascript" src="/js/noty/packaged/jquery.noty.packaged.min.js"></script>
+  <script type="text/javascript" src="/js/jquery_form/jquery.form.min.js"></script>
 
     {+script-content}
     {/script-content}

@@ -1,4 +1,8 @@
 {>"../../../layout/layout"/}
+{<title-content}
+	<title> buyTogether - india's first group shopping site</title>
+{/title-content}
+
 {<css-content}
 <link rel="stylesheet" href="/css/custom/home/home.css">
 <link rel="stylesheet" href="/css/bootstrap_vertical_tab/bootstrap.vertical-tabs.min.css">

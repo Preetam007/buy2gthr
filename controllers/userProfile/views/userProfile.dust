@@ -1,4 +1,7 @@
 {>"../../../layout/layout"/}
+{<title-content}
+<title> {user_name} - buyTogether - india's first group shopping site</title>
+{/title-content}
 {<css-content}
 <link rel="stylesheet" href="/js/bootstrap-rating/css/star-rating.min.css">
 {/css-content}
@@ -14,41 +17,37 @@
 						  <li class="active">userProfile</li>  
 				  </ul>
 			   </div>
-			   
 		   </div>
 		 {/userprofile}
 	   
 	   <div class="row">
-	   
 		   <div class="col-md-3" id="place1">
-					  <div class="panel panel-default">	
-						<div class="panel-body" align="center">
-							{^userprofile}
-							<input  id="input-2b" class="rating form-control" data-show-clear="false" value="3" data-min="0" data-size="xs" data-max="5" data-step="0.5" data-stars="5"  disabled= "true">
-							{/userprofile}
-						    <img src="/{image_source}"  width="100" height="100" class="img-rounded" />
-						<br />
-						
-						<h5><strong>{email}</strong></h5>
-						<p>&nbsp;</p>
-						<div class='txt2'><strong><h5>{city}</h5></strong></div>
-					    <div class='text-muted'><h5>{company_name}</h5></div>
-					    {^userprofile}
-							<div><button class="btn btn-primary" value="{following}" id="followuser" >
-							 {@if cond="({following}== '1')"}
-									FOLLOWING
-							 {:else}
-							 		FOLLOW
-							 {/if}
-							 </button></div>
-						 {/userprofile}	 
-						
-						<p>&nbsp;</p>
-						</div>
-					  </div>
-			          
-					  <!-- panel 1-->
-				</div><!-- col -->
+			  <div class="panel panel-default">	
+				<div class="panel-body" align="center">
+					{^userprofile}
+					<input  id="input-2b" class="rating form-control" data-show-clear="false" value="3" data-min="0" data-size="xs" data-max="5" data-step="0.5" data-stars="5"  disabled= "true">
+					{/userprofile}
+					<img src="/{image_source}"  width="100" height="100" class="img-rounded" />
+				<br/>
+				<h5><strong>{email}</strong></h5>
+				<p>&nbsp;</p>
+				<div class='txt2'><strong><h5>{city}</h5></strong></div>
+				<div class='text-muted'><h5>{company_name}</h5></div>
+				{^userprofile}
+					<div>
+						<button class="btn btn-primary" value="{following}" id="followuser" >
+						 {@if cond="({following}== '1')"}
+								FOLLOWING
+						 {:else}
+								FOLLOW
+						 {/if}
+						 </button>
+					 </div>
+				 {/userprofile}	 
+				<p>&nbsp;</p>
+				</div>
+			  </div>
+		    </div><!-- col -->
 				<div class="col-md-9">	
 				  <div class="row">
 					  <div class="col-md-9">
@@ -60,131 +59,109 @@
 								<li style="background-color: #cccccc">
 
 							<input id="input-id1" type="number" class="rating" min=1 value = "5"  max=5 step=1 data-size="xs" >
-
 								</li>
 							</ul>	
 					        {/userprofile}
-					  
-					  
 				   <!-- Nav tabs -->
-						<ul class="nav nav-tabs" role="tablist">
-						  <li class="active profile-tooltip" title= "profile of user"><a href="#profile"  role="tab" data-toggle="tab" ><span class="glyphicon glyphicon-user"></span>profile</a>
-						  </li>
-							<li class="reviews-tooltip" title= "reviews of user">
-							   <a href="#reviews"  role="tab" data-toggle="tab" onclick="getreviews();"><span class="glyphicon glyphicon-signal"></span>reviews(120)</a>
-						   </li>
-							<li class="followers-tooltip" title= "followers of user">
-							   <a href="#followers"  role="tab" data-toggle="tab" onclick="getfollowers();"><span class="glyphicon glyphicon-signal"></span>followers(22)</a>
-						   </li>
-							{?userprofile}
-						  <li class="mates-tooltip" title= "comp/colg mates of user"><a href="#mates"  role="tab" data-toggle="tab" onclick="getallmates();"><span class="glyphicon glyphicon-record"></span>your college/company mates </a>
-						  </li>
-						   <li class="activities-tooltip" title= "activities of user">
-							   <a href="#activities"  role="tab" data-toggle="tab" onclick="getactivities();"><span class="glyphicon glyphicon-signal"></span>your activities</a>
-						   </li>
-							{/userprofile}
-						  
-						</ul>
+							<ul class="nav nav-tabs" role="tablist">
+							  <li class="active profile-tooltip" title= "profile of user"><a href="#profile"  role="tab" data-toggle="tab" ><span class="glyphicon glyphicon-user"></span>profile</a>
+							  </li>
+							   <li class="reviews-tooltip" title= "reviews of user">
+								   <a href="#reviews"  role="tab" data-toggle="tab" onclick="getreviews();"><span class="glyphicon glyphicon-signal"></span>reviews(120)</a>
+							   </li>
+							   <li class="followers-tooltip" title= "followers of user">
+								   <a href="#followers"  role="tab" data-toggle="tab" onclick="getfollowers();"><span class="glyphicon glyphicon-signal"></span>followers(22)</a>
+							   </li>
+								{?userprofile}
+							    <li class="mates-tooltip" title= "comp/colg mates of user"><a href="#mates"  role="tab" data-toggle="tab" onclick="getallmates();"><span class="glyphicon glyphicon-record"></span>your college/company mates </a>
+							    </li>
+							    <li class="activities-tooltip" title= "activities of user">
+								   <a href="#activities"  role="tab" data-toggle="tab" onclick="getactivities();"><span class="glyphicon glyphicon-signal"></span>your activities</a>
+							    </li>
+								{/userprofile}
+							</ul>
 						
 						<!-- Tab panes -->
 						<div class="tab-content">
 						     <div class="tab-pane active" id="profile">
-									 <div class="bs-example table-responsive">
-										<table class="table">
-											<tbody>
-												<tr>
-													<td>{?userprofile}your{/userprofile} name</td>
-													<td><a id="userid{ids}" value="{user_name}" 
-		{?userprofile}class="editname btn btn-default" {/userprofile}>{user_name}</a></td>
-												</tr>
-												<tr>
-													<td>{?userprofile}your{/userprofile} email</td>
-													<td><a id="emailid{ids}" value="{email}" 
-				{?userprofile}class="editemail btn btn-default"{/userprofile}>{email}</a></td>
-												</tr>
-												<tr>
-													<td>{?userprofile}your{/userprofile} company name</td>
-													<td><a id="compids{ids}" value="{company_name}" 
-				{?userprofile}class="editcomp btn btn-default"{/userprofile}>{company_name}</a></td>
-												</tr>
-												<tr>
-													<td>{?userprofile}your{/userprofile} company city</td>
-													<td><a id="city{ids}" value="{city}"
-		        {?userprofile}class="editcity btn btn-default"{/userprofile}>{city}</a></td>
-												</tr>
-												
-											</tbody>
-										</table>
-									</div>		  	
+								 <div class="bs-example table-responsive">
+									<table class="table">
+										<tbody>
+											<tr>
+												<td>{?userprofile}your{/userprofile} name</td>
+												<td><a id="userid{ids}" value="{user_name}" 
+	{?userprofile}class="editname btn btn-default" {/userprofile}>{user_name}</a></td>
+											</tr>
+											<tr>
+												<td>{?userprofile}your{/userprofile} email</td>
+												<td><a id="emailid{ids}" value="{email}" 
+			{?userprofile}class="editemail btn btn-default"{/userprofile}>{email}</a></td>
+											</tr>
+											<tr>
+												<td>{?userprofile}your{/userprofile} company name</td>
+												<td><a id="compids{ids}" value="{company_name}" 
+			{?userprofile}class="editcomp btn btn-default"{/userprofile}>{company_name}</a></td>
+											</tr>
+											<tr>
+												<td>{?userprofile}your{/userprofile} company city</td>
+												<td><a id="city{ids}" value="{city}"
+			{?userprofile}class="editcity btn btn-default"{/userprofile}>{city}</a></td>
+											</tr>
+										</tbody>
+									</table>
+								</div>		  	
 						     </div>
 							{?userprofile}
 						    <div class="tab-pane" id="mates">
-						        
-						     
-								               
+						                       
 						    </div>
 							<div class="tab-pane" id="activities">
 						  
-						              
-									         
- 
 						    </div>
 							
 							{/userprofile}
 							<div class="tab-pane" id="reviews">
-						  
 								<p> 120 reviews</p>
-									         
- 
 						    </div>
 							<div class="tab-pane" id="followers">
 						      <div class="panel panel-default">
-									  <div class="panel-body">
-									        <table id="allfollowers"  cellpadding="0" cellspacing="0" border="0" class="datatable table table-responsive">
-												<thead>
-													<tr>
-														<th>name</th>
-														<th>follow</th>
-													</tr>
-												</thead>
-												<tbody>
-												
-												</tbody>
-												
-				                            </table>  
-									  </div>
-									</div> 	         
- 
+								  <div class="panel-body">
+									<table id="allfollowers"  cellpadding="0" cellspacing="0" border="0" class="datatable table table-responsive">
+										<thead>
+											<tr>
+												<th>name</th>
+												<th>follow</th>
+											</tr>
+										</thead>
+										<tbody>
+
+										</tbody>
+									</table>  
+								  </div>
+								</div>
 						    </div>
 							
 						</div>
+					</div>
+					  <div class="col-md-3" >
+						  <div><h4 style="margin-left:22px"> users to follow</h4></div>
+						  <div>
+							   <table id="recomfollowers"  cellpadding="0" cellspacing="0" border="0" class="datatable table table-responsive">
+									<thead>
+										<tr>
+											<th>name</th>
+											<th>follow</th>
+										</tr>
+									</thead>
+									<tbody>
+
+									</tbody>
+								</table>
 						  </div>
-					      <div class="col-md-3" >
-							  <div    ><h4 style="margin-left:22px"> users to follow</h4></div>
-							  <div>
-							       <table id="recomfollowers"  cellpadding="0" cellspacing="0" border="0" class="datatable table table-responsive">
-												<thead>
-													<tr>
-														<th>name</th>
-														<th>follow</th>
-													</tr>
-												</thead>
-												<tbody>
-												
-												</tbody>
-												
-				                            </table>
-							  
-							  </div>
-									         
-									 
-					      </div>	  
+					  </div>	  
 				  </div>
-					
-				  
 	            </div>		
 	   </div>
-	   
 	 </div>
  {/page-content}
  {<script-content}
@@ -192,7 +169,7 @@
      <script src='/js/bootstrap-rating/js/star-rating.min.js'></script>
      <script>
 		 {^userprofile}
-		 var user_id = '{user_id}';
+		     var user_id = '{user_id}';
 		 {/userprofile}
 		 
 		 var follow_stat ='{following}';

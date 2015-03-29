@@ -1,4 +1,12 @@
 {>"../../../layout/layout"/}
+{<title-content}
+{@if cond="(('{brand}'== 'all'))"}
+<title> Brands - buyTogether - india's first group shopping site</title>
+{:else}
+<title> {brand} - buyTogether - india's first group shopping site</title>
+ {/if}
+{/title-content}
+
 
 {<page-content}
 <div class="container-fluid">
