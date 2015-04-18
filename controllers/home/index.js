@@ -45,59 +45,42 @@ exports.list = function(req, res)
                    else 
 				   {
 						 var method = req.query.method ;
-						  console.log(method);
-						  
-						 //console.log(datab[method]);
-						 
+						  //console.log(method);
 						 if(req.query.method ==  method)	
 						 { 
 						    if(datab[method] != undefined)
 							{
-								
 								console.log(datab[method]);
+								var li = 0;
+								var gi = 16 ;
+								var ss ;
+								var data_load = 17 * (req.query.data_load -1)-(req.query.data_load-1-1);
 								
-						    	 //console.log("first ajax");
-//								   connection.query("select * from "+ datab[method],function(err,rows)
-//									 {
-//									   if(!err) 
-//									   {
-//									     res.send(rows);
-//									   }
-//									   else
-//									       console.log(err);
-//									   
-//									 });
-                                    connection.query("select * from offers where company = ? limit 0,16",[datab[method]],function(err,rows)
-									{
-									   if(!err)
-									   {
-									      //console.log(rows);
-									      res.send(rows);
-									   }
-									   else
-									        console.log(err);
-									
-									
-									});
-                                   
-
+								if(req.query.data_load != undefined )
+								{
+                                     ss = "select * from offers where company = ? limit "+data_load +",16 " ;
+								}
+								else
+								{
+									 ss = "select * from offers where company = ? limit 0,16 ";
+								}
+								
+		                        connection.query(ss,[datab[method]],function(err,rows)
+								{
+								   if(!err) res.send(rows);
+								   else
+										console.log(err);
+								});
 							}
 						    else if(req.query.method == 'offerProfileStar')
 							 {
-							    // console.log("2nd ajaxxx");
-								
-								 
 								 var offer_id = req.query.offer_id ;
 								 var islive = req.query.is_live;
-								 //console.log(islive);
-								 
-								 
-								        connection.query("select id ,is_live from user_activity where user_id =? and offer_id = ? and activity_type_id = ?",[id,offer_id,3],function(err,rows)
+
+								 connection.query("select id ,is_live from user_activity where user_id =? and offer_id = ? and activity_type_id = ?",[id,offer_id,3],function(err,rows)
 								        {
 								        	if(!err)
 								        	{
-								        		//console.log(rows.length);
-								        		//console.log(rows[0].id);
 								        		if(rows.length < 1)
 												{
 								        			//console.log("insert");

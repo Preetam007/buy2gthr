@@ -90,13 +90,7 @@ var datab = {
 							 fashionndata : 'http://api.dataweave.in/v1/coupons/listByStore/?'+
 		         'api_key=f7286d24b072626167c373671355077cf5175331&store=Fashion%2Band%2BYou&page=1&per_page=10',
 							link : 'www.fashionandyou.com'
-					      },
-				  shopclues :
-						 {
-							 shopcluesdata : 'http://api.dataweave.in/v1/coupons/listByStore/?'+
-		         'api_key=f7286d24b072626167c373671355077cf5175331&store=Shopclues&page=1&per_page=10',
-							link : 'www.shopclues.com'
-					      }						  
+					      }
 			};	
 
 var dat = ecomp+'data' ;

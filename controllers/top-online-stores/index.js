@@ -97,26 +97,97 @@ exports.list = function(req, res)
 };
 exports.list1 = function(req, res)
 {
-	//console.log(req.body);
+	
+	//console.log('1st');
+	console.log(req.params.data_load);
+connection.query("select tp.* ,count(*) as maxdata_load from toponlinestores tp  join offers of on "+
+				" tp.store_name =of.company where store_name = ?",[req.params.id],function(err,resd)
+	   {
+	
+	       console.log(resd);
+	        if(err) console.log(err);
+			var data_load = 11 * (req.params.data_load -1)-(req.params.data_load-1-1);
 
-		  connection.query("select * from toponlinestores where store_name = ?",[req.params.id],function(err,resd)
-		   {
-	connection.query("select of.id ,IFNULL(of.plan_name,'flip') as plan_name ,of.extra_off,of.brand ,"+
- "br.image_source ,IFNULL(ol.is_live,2) as offer_love from offers of left join brands br "+
- "on of.brand = br.brand_name left join offer_love ol on of.id = ol.offer_id where of.company = ? limit 0,4",[req.params.id],function(err,rows)
-				 {
-		console.log(rows);
-				    if(err) console.log(err);
-				     console.log(resd);
+	
+	       // console.log(data_load);
+			var ss = '';
+            var next = parseInt(req.params.data_load) + parseInt(1);
+	         
+	       // console.log(req.params.id);
+			if(req.params.data_load == undefined)
+			{
+				ss = "select of.id ,IFNULL(of.plan_name,'flip') as plan_name ,of.extra_off,of.brand ,"+
+		"br.image_source ,IFNULL(ol.is_live,2) as offer_love from offers of left join brands br "+
+		"on of.brand = br.brand_name left join offer_love ol on of.id = ol.offer_id where of.company = ? limit 0,10" ;
+			}
+			else if(req.params.data_load == NaN)
+			{
+				ss = "select of.id ,IFNULL(of.plan_name,'flip') as plan_name ,of.extra_off,of.brand ,"+
+		"br.image_source ,IFNULL(ol.is_live,2) as offer_love from offers of left join brands br "+
+"on of.brand = br.brand_name left join offer_love ol on of.id = ol.offer_id where of.company = ? limit 0,10 ";
+			}
+	        else
+			{
+				ss = "select of.id ,IFNULL(of.plan_name,'flip') as plan_name ,of.extra_off,of.brand ,"+
+		"br.image_source ,IFNULL(ol.is_live,2) as offer_love from offers of left join brands br "+
+	"on of.brand = br.brand_name left join offer_love ol on of.id = ol.offer_id where of.company = ? limit "+data_load+",10 ";
+			}
+	
+             connection.query(ss,[req.params.id],function(err,rows)
+			 {
+	             console.log(ss);
+				 if(err) console.log(err);
 				 
-						 res.render('./top-online-stores.dust',
-						 {
-							 messagm : 'yes',
-						     store : req.params.id,
-							 data2 :resd,
-							 data1 : rows
-						 });
+				 res.render('./top-online-stores.dust',
+				 {
+					 messagm : 'yes',
+					 store : req.params.id,
+					 data2 :resd,
+					 data1 : rows,
+//					 maxdata_load : resd[0].maxdata_load ,
+//					 data_load_next : 2,
+					 data_load : req.params.data_load != undefined ? req.params.data_load : 1,
+					 maxdata_load : resd[0].maxdata_load ,
+					 data_load_next : req.params.data_load != undefined ? next : 2,
+					 data_load_previous : req.params.data_load == 2 ? '': req.params.data_load -1
 				 });
-		   });
+			 });
+	   });
+};
+exports.list2 = function(req, res)
+{
+	console.log(req.params.data_load);
+	
+	if(req.params.data_load != undefined)
+	{
+		console.log('3st');
+connection.query("select tp.* ,count(*) as maxdata_load from toponlinestores tp  join offers of on tp.store_name =of.company "+ 
+			"where store_name = ?",[req.params.id],function(err,resd)
+	   {  
+			if(err) console.log(err);
+			connection.query("select of.id ,IFNULL(of.plan_name,'flipkat offer') as plan_name ,of.extra_off,of.brand ,"+
+			"br.image_source ,IFNULL(ol.is_live,2) as offer_love from offers of left join brands br "+
+			"on of.brand = br.brand_name left join offer_love ol on of.id = ol.offer_id where of.company = ? limit 5,4",[req.params.id],function(err,rows)
+			 {
+//				console.log(rows);
+				console.log(resd[0]);
+				if(err) console.log(err);
+                      var next = parseInt(req.params.data_load) + parseInt(1) ;
+					 res.render('./top-online-stores.dust',
+					 {
+						 messagm : 'yes',
+						 store : req.params.id,
+						 data2 :resd,
+						 data1 : rows,
+						 data_load : req.params.data_load ,
+						 maxdata_load : resd[0].maxdata_load ,
+						 data_load_next : next,
+						 data_load_previous : req.params.data_load -1
 
+					 });
+			 });
+	   });
+		
+	}
+		
 };

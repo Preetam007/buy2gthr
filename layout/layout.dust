@@ -20,6 +20,8 @@
   <link rel="stylesheet" href="/js/noty/css/animate.min.css"> 																      <link rel="shortcut icon" type="image/x-icon" href="/images/favicon.ico" />																						
   {+css-content}
   {/css-content}
+  {+share-content}
+  {/share-content}
 </head>
   <body>
   <div class="container-fluid" >
@@ -227,28 +229,6 @@
 {/messagm}
      {+page-content}
      {/page-content}
-     <div>
-		<nav>
-		  <ul class="pagination">
-			<li>
-			  <a href="#" aria-label="Previous">
-				<span aria-hidden="true">&laquo;</span>
-			  </a>
-			</li>
-			<li><a href="#">1</a></li>
-			<li><a href="#">2</a></li>
-			<li><a href="#">3</a></li>
-			<li><a href="#">4</a></li>
-			<li><a href="#">5</a></li>
-			<li>
-			  <a href="#" aria-label="Next">
-				<span aria-hidden="true">&raquo;</span>
-			  </a>
-			</li>
-		  </ul>
-		</nav>
-</div>
-	
      <div class="container">
 	     <hr>
 	     <footer>
@@ -278,7 +258,6 @@
 			</div>
 	    </footer>
     </div>
-	
   <script src="/js/hogan/hogan.js"></script>
   <script type="text/javascript" src="js/jquery.min.js"></script>
   <script type="text/javascript" src="/js/ajax.jquery.js"></script>

@@ -5,6 +5,7 @@
         "C:/JBK/buyTogether/public/js/custom/viewbybrand/viewbybrand.js",
         "C:/JBK/buyTogether/controllers/view-by-brand/index.js",
         "C:/JBK/buyTogether/scripts/websites_excel/websites.js",
-        "C:/JBK/buyTogether/scripts/malls/malls.js"
+        "C:/JBK/buyTogether/scripts/malls/malls.js",
+        "C:/JBK/buyTogether_check/controllers/home/index.js"
     ]
 }

@@ -12,6 +12,12 @@
 <link rel="stylesheet/less" href="/less/toponlinestores/stores.less" type="text/css">
 <link rel="stylesheet" href="/css/custom/onlinestores/store.css"></link>
 <link rel="stylesheet" href="/js/sweetalert/sweetalert.min.css"></link>
+<style>
+	.pagination
+	{
+	  padding-left : 20%;
+	}
+</style>
  {/css-content}
 {<page-content}
      <div class="container-fluid">
@@ -52,7 +58,6 @@
 								<a  href="/top-online-stores/type/{tag_line}">
 								   <img width="120" class='img-rounded' height="70" alt="2go ACTIVE GEAR USA"  src={image_source}>
 								</a>
-
 						   </li>
 						   {/data}
 					   </ul>
@@ -61,101 +66,112 @@
            </div>
 		   {:else}
            <div class="row">
-
-		   <div class="col-md-2" id="place1">
-					  <div class="panel panel-default">
-						<div class="panel-body">
-					     {#data2}
-						<img src={image_source} height="60" width="120" class="img-rounded" />
-			            </br>
-						<h2 id="storeLove1" class="text-center" title="get notifications on this brand">
-							<span  value = '1' class='glyphicon glyphicon-heart '></span>
-						</h2>
-						 <div>
-						      <p><a class='btn btn-primary btn-md' href='{link}' target='_blank'>Shop on {store}</a></p>
-						 </div>
-						{/data2}
-						<p>&nbsp;</p>
-
-						</div>
-					  </div>
-					  <!-- panel 1-->
-		  </div><!-- col-md-2 -->
-
-			   <div class="col-md-9">
+			   <div class="col-md-2" id="place1">
+						    <div class="panel panel-default">
+								<div class="panel-body">
+								{#data2}
+								<img src={image_source} height="60" width="120" class="img-rounded" />
+								</br>
+								<h2 id="storeLove1" class="text-center" title="get notifications on this brand">
+									<span  value = '1' class='glyphicon glyphicon-heart '></span>
+								</h2>
+								<div>
+								<p><a class='btn btn-primary btn-md' href='{link}' target='_blank'>Shop on {store}</a></p>
+								</div>
+								{/data2}
+								<p>&nbsp;</p>
+								</div>
+						    </div>
+						  <!-- panel 1-->
+			  </div><!-- col-md-2 -->
+			  <div class="col-md-9">
 				    <div class="controls">
 						  <label>Filter:</label>
-
 						  <button class="filter" data-filter="all">All</button>
 						  <button class="filter" data-filter=".category-0">offers</button>
 						  <button class="filter" data-filter=".category-1">buy1get1</button>
 
 						  <label>Sort:</label>
-
 						  <button class="sort" data-sort="myorder:asc"> price Asc</button>
 						  <button class="sort" data-sort="myorder:desc"> price Desc</button>
-		          </div>
+		            </div>
 				   {?data1}
 				   <ul  style="list-style-type: none;">
 					  <div id="Container" class="container">
 							 {#data1}
 							  <li>
-								  
-								  
-							   <div class=" mix category-{buy1get1} panel panel-default">
+							  <div class=" mix category-{buy1get1} panel panel-default">
 								   <div class="panel-heading">
 											<h3 class="panel-title"> {extra_off} % extra discount on
 												--- <a title="see all {brand} offers" href="/view-by-brand/type/{brand}">
 												{brand}</a> &nbsp;&nbsp;{type}
 									        </h3>
 								   </div>
-								<div class="panel-body">
-									<div class="row">
-										<div class="col-md-11">
-
-											<ul class="list-inline">
-											 <li>
-											 <a href="/offerProfile/id/{id}">
-
-												 <img src={image_source} height="60" width="120" class="img-rounded" />
-
-											</a>
-											</li>
-											<li>
-												{plan_name}
-											</li>
-
-											</ul>
-
-										</div>
-										<div class="col-md-1">
+									<div class="panel-body">
+										<div class="row">
+											<div class="col-md-11">
+												<ul class="list-inline">
+												 <li>
+													 <a href="/offerProfile/id/{id}">
+														 <img src={image_source} height="60" width="120" class="img-rounded" />
+													 </a>
+												 </li>
+												<li>
+													{plan_name}
+												</li>
+												</ul>
+											</div>
+											<div class="col-md-1">
 											<h2 class='text-right togstar' title='will be get notified ,If any body interested in yhis offer' id="storestar{id}"><span value = '{offer_love}' 
-											{@if cond="({offer_love} == '1')"} 
-											class='glyphicon  glyphicon-star' 
-											{:else} 
-											class='glyphicon  glyphicon-star-empty'
-											{/if} ></span></h2>
+												{@if cond="({offer_love} == '1')"} 
+												class='glyphicon  glyphicon-star' 
+												{:else} 
+												class='glyphicon  glyphicon-star-empty'
+												{/if} ></span>
+											</h2>
+											</div>
 										</div>
 									</div>
-								</div>
-								<div class="panel-footer">Panel footer</div>
-
+									<div class="panel-footer">Panel footer</div>
 							  </div>
 							   </li>{~n}
 							 {/data1}
-						   </div>
+						</div>
 					 </ul>
+					 
 				   {:else}
+				   
 				    <div class="panel panel-default">
 						<div class="panel-body">
 							{#data2}
 							<div class="row" style="margin-top:35px;margin-left:15px;margin-bottom:8px;">
-									there are  currently no offers from {store_name} ,like this brand to get all offers from {store_name}
+												<p>there are  currently no offers from {store_name} ,like this brand to get all offers from {store_name}</p>
 							</div>
 							{/data2}
 						</div>
                     </div>
 				   {/data1}
+				   <div>
+						<nav>
+						  <ul class="pagination">
+							<li>
+							  <a id="previous_load" aria-label="Previous" href="/top-online-stores/type/{store}/{data_load_previous}" title="previous">
+								<span aria-hidden="true">&laquo;</span>
+							  </a>
+							</li>
+							<li><a  class="data_load" data_load="1" href="/top-online-stores/type/{store}">1</a></li>
+							<li><a  class="data_load" data_load="2" href="/top-online-stores/type/{store}/2" >2</a></li>
+							<li><a  class="data_load" data_load="3" href="/top-online-stores/type/{store}/3">3</a></li>
+							<li><a  class="data_load" data_load="4"  href="/top-online-stores/type/{store}/4">4</a></li>
+							<li><a  class="data_load"  data_load="5" href="/top-online-stores/type/{store}/5">5</a></li>
+							<li>
+							  <a id="next_load"  href="/top-online-stores/type/{store}/{data_load_next}" aria-label="Next" title="next">
+								<span aria-hidden="true">&raquo;</span>
+							  </a>
+							</li>
+						  </ul>
+						</nav>
+					</div>
 			   </div>
            </div>
            {/if}
@@ -174,6 +190,7 @@
 	{#data2}
           var plan ="{store_name}";
 		  var id = {id} ;
+		  var max_load = {maxdata_load};
      {/data2}
 </script>
 {/data2}

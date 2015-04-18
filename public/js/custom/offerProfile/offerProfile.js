@@ -1,5 +1,26 @@
 var offerid ;
 $(document).ready(function() {
+	
+	page_views++ ;
+	
+	console.log(page_views);
+	
+	$.ajax({
+				   url: "/offerProfile/id/"+ids,
+				   data:
+				   {
+					   method:'page_views_count',
+					   page_views:page_views,
+					   offer_id : ids
+				   },
+//				   cache:true,
+				   success: function(data)
+				   {
+					   console.log(data);
+					  $("#page_views").text("Page views - "+page_views);
+				   }
+			});
+	
 	$("[data-toggle='tooltip']").tooltip();
 	$("[data-toggle='popover']").popover();
 
@@ -33,20 +54,20 @@ $(document).ready(function() {
 					});
 
 
-		  $('body').on('click','#googlemap',function(){
+		  $('body').on('click','#googlemap',function(){  
 			  $(".gscriptid").empty();
 			  $("#myModal").modal('show');
 			 
 			  $(".gscriptid" ).append( "<div>"+
-					"<iframe width='500px' height='280px' frameborder='0' style='border:0'"+
-			         "src='https://www.google.com/maps/embed/v1/directions?"+
-"key=AIzaSyAb9sz-Ih7YtVpdvoT5mLqgkJBx99yR8bc&origin=Anand,+Gujarat,+India&destination=Ahmedabad,+Gujarat,+India&mode=driving'>"+
-					"</iframe>"+
-				     "</div>" );
-		  });
-		  $('body').on('click','#closepopover',function(){
-			   $('.popover:visible').popover('hide'); 
-		  });
+				"<iframe width='500px' height='280px' frameborder='0' style='border:0'"+
+			    "src='https://www.google.com/maps/embed/v1/directions?key=AIzaSyAb9sz"+
+			"-Ih7YtVpdvoT5mLqgkJBx99yR8bc&origin=Anand,+Gujarat,+India&destination=Ahmedabad,+Gujarat,+India&mode=driving'>"+
+				"</iframe>"+
+				"</div>" );
+		      });
+			  $('body').on('click','#closepopover',function(){
+				   $('.popover:visible').popover('hide'); 
+			  });
 	 });
 
 //	data table logic starts
@@ -115,36 +136,14 @@ function showPosition(position) {
 		
 }
 
-//$('.selectorClass').socialShare({
-//social: 'blogger,delicious,digg,facebook,friendfeed,google,'+
-//'linkedin,myspace,pinterest,reddit,stumbleupon,'+
-//'tumblr,twitter,windows,yahoo'
-//});
-
-//$('.selectorClass').socialProfiles({
-//email: 'example@example.com',
-//behance: 'gokhun',
-//facebook: 'tolgaergin',
-//twitter: 'tolgaergin',
-//pinterest: 'tolga',
-//dribbble: 'bbb',
-//scoutzie: 'gokhun'
-//});
-
-
  $('body').on('click','.invitation',function(){
 
 	 var userid = this.id ;
-
 	 var htm = $('.invitation#'+userid+' span').html();
-
-	 //alert(htm);
-
+	 
 	 $.ajax({
 		   url: "/offerProfile/id/1",
-    beforeSend : function(){
-		            $('.invitation#'+userid+' span').html('loading')
-	             },
+           beforeSend : function(){ $('.invitation#'+userid+' span').html('loading')},
 		   data:
 			   {
 				   method:'sendinvitation',
@@ -158,9 +157,6 @@ function showPosition(position) {
 		     $('.invitation#'+userid+' span').html(data);
 		   }
 	 });
-
-
-
  });
 
 function getallmates()
@@ -204,9 +200,6 @@ var oTable = $('#allmates').dataTable(
 }
 function getallcitymates()
 {
-
-
-
 	var aacolumns =[];
 	var sort = [];
 

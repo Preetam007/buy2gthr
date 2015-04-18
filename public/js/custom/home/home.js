@@ -60,6 +60,8 @@ $(function()
             },			
 		success: function (data) 
 			{ 
+				$('#FlipkartPanel').empty();
+				
 			   for(var i = 0 ; i< data.length ; i++)
 			   {
 				   //console.log(data[i]);
@@ -311,20 +313,96 @@ $('body').on('click','.togLike',function()
 	   var offer_id = spli[1];
 	   
 	   var ddd = '#'+idd;
-    
-      
-		  $.ajax({
+   
+	  $.ajax({
+				url: "/home",
+				data :
+					{  
+					  offer_id : offer_id ,
+					  method : 'offerProfileLove'
+					},
+					success: function (data) 
+					{
+					   // $(ddd +'  span').toggleClass("glyphicon-star-empty");
+						  $(ddd +'  span').toggleClass("glyphicon-heart-empty");
+					}
+			  });   
+	});
+
+   $(".pagination li a").click(function()
+	{
+	  console.log($(this).attr('data_load'));
+//	   console.log(this.data_load);
+	   
+	    $.ajax({
 					url: "/home",
 					data :
 						{  
-						  offer_id : offer_id ,
-						  method : 'offerProfileLove'
+						  data_load : $(this).attr('data_load') ,
+						  method : 'flipkartdata'
 						},
 						success: function (data) 
 						{
-						   // $(ddd +'  span').toggleClass("glyphicon-star-empty");
-							  $(ddd +'  span').toggleClass("glyphicon-heart-empty");
+							console.log('data load done');
+						   $('#FlipkartPanel').empty();
+							
+						   for(var i = 0 ; i< data.length ; i++)
+						   {
+								var str = "<div class='col-xs-6 col-sm-3'>"+
+											  "<div class='panel panel-default'>"+	
+												   "<div class='panel-body' align='center'>"+
+			"<a href='/offerProfile/id/"+data[i].id+"' ><img class='lazy img-rounded' data-original='/images/fab-furnish-logo.gif'  />"+
+														"<h5><strong>"+data[i].offer_desc.substring(0,70)+"...</strong></h5></a>"+
+
+														 "<div class='txt2'><strong><h5>[Min Price. <i class='fa fa-inr'></i>"+data[i].min_price+"]</h5></strong></div>"+
+														 "<div class='text-muted'><h5>[coupon_code:"+data[i].coupon_code+"]</h5></div>"+
+														 "<div>"+
+															  "<p><a class='btn btn-info btn-md' href='"+data[i].link+"' target='_blank'>Shop Now</a></p>"+
+														 "</div>"+
+														 "<div class='row'>"+
+															 "<button type='button' id='togLike"+data[i].id+"' class='btn togLike' title ='get notifications'>"+
+																  "<span class='glyphicon glyphicon-heart'></span>"+  
+															  "</button>"+
+															  "<button type='button' style='margin-left : 8px' id='togStar"+data[i].id+"' class='btn togStar' title ='get notifications'>"+
+																   "<span class='glyphicon glyphicon-star'></span>"+
+															  "</button>"+
+															  "<button class='btn togShare' data-toggle='modal' data-target='#less"+data[i].id+"' style='margin-left : 8px' id='togShare"+data[i].id+"' >"+
+															   "<span class='glyphicon glyphicon-share'></span>"+
+															   "</button>"+
+															   "<div id='less"+data[i].id+"' class='modal'>"+
+																"<div class='modal-dialog '>"+
+																	"<div class='modal-content'>"+
+																		"<div class='modal-header'>"+
+																			"<button type='button' class='close' data-dismiss='modal' aria-hidden='true'>&times;</button>"+
+																			"<h4 class='modal-title'>Confirmation</h4>"+
+																		"</div>"+
+																		"<div class='modal-body'>"+
+																			"<p>Do you want t</p>"+
+																			"<p class='text-warning'><small>If you don'.</small></p>"+
+																		"</div>"+
+																		"<div class='modal-footer'>"+
+																			"<button type='button' class='btn btn-default' data-dismiss='modal'>Close</button>"+
+																			"<button type='button' class='btn btn-primary'>Save changes</button>"+
+																		"</div>"+
+																	"</div>"+
+																"</div>"+
+															"</div>"+
+
+														  "</div>"+
+														  "<footer>posted 1 min ago</footer>"+
+													 "</div>"+
+												  "</div>"+	  
+											"</div>" ;
+								 $(str).appendTo('#FlipkartPanel');	
+							     $('html, body').animate({scrollTop : 0},200);
+						   }	
+							$("img.lazy").lazyload(
+							{
+								effect : "fadeIn"
+
+							});
 						}
-				  });   
-	});
+				  });
+    });
+
    

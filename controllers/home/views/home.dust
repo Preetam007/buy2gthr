@@ -1,11 +1,50 @@
 {>"../../../layout/layout"/}
 {<title-content}
+	
+	
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width = device-width, initial-scale = 1.0, maximum-scale = 1.0 user-scalable = no" />
+
+	<meta name="description" content="This Sunday we are all Kiwis!"/>
+	<meta name="keywords" content="Cricket, Sports, World Cup, "/>
 	<title> buyTogether - india's first group shopping site</title>
+
+	<meta property="og:site_name" content="ScoopWhoop" />
+	<meta property="og:type" content="article" />
+	<meta property="fb:app_id" content="1561751127407847" />
+	<meta property="og:url" content="http://www.scoopwhoop.com/sports/mccullum-request-india/" />
+	<meta property="og:title" content="New Zealand Skipper Brendon McCullum Has A Request To All Indian Fans Ahead Of The World Cup Final" />
+	<meta property="og:image" content="http://s4.scoopwhoop.com/sup/misc/nu.jpg" />
+	<meta property="og:description" content="This Sunday we are all Kiwis!" />
+	<meta property="article:publisher" content="https://www.facebook.com/Scoopwhoop" />
+	<meta property="article:published_time" content="2015-03-28 07:34:49" />
+	<meta property="article:section" content="Sports" />
+	<meta name="author" content="Joshua Moraes" />
+	<meta property='article:tag' content='Cricket' /> 
+	<meta property='article:tag' content='Sports' /> 
+	<meta property='article:tag' content='World Cup' /> 	
+	<meta name="twitter:card" content="summary_large_image">
+	<meta name="twitter:site" content="@ScoopWhoop">
+	<meta name="twitter:creator" content="@ScoopWhoop">
+	<meta name="twitter:image" content="http://s4.scoopwhoop.com/sup/misc/nu.jpg">
+	<meta name="twitter:description" content="This Sunday we are all Kiwis!">
+	<meta name="twitter:title" content="New Zealand Skipper Brendon McCullum Has A Request To All Indian Fans Ahead Of The World Cup Final">
+	<meta name="twitter:url" content="http://www.scoopwhoop.com/sports/mccullum-request-india/">
+	<meta name="twitter:domain" content="scoopwhoop.com">
+
+	<link rel='canonical' href='http://www.scoopwhoop.com/sports/mccullum-request-india/' />
+	
 {/title-content}
 
 {<css-content}
 <link rel="stylesheet" href="/css/custom/home/home.css">
 <link rel="stylesheet" href="/css/bootstrap_vertical_tab/bootstrap.vertical-tabs.min.css">
+<style>
+	.pagination
+	{
+	  padding-left : 20%;
+	}
+</style>	
  {/css-content}
  
 {<page-content}   
@@ -29,14 +68,7 @@
 					  <li><a href="#Zivame"  role="tab" data-toggle="tab">Zivame</a></li>
 					  <li><a href="#FirstCry"  role="tab" data-toggle="tab">FirstCry</a></li>
 					  <li><a href="#Pepperfry"  role="tab" data-toggle="tab">Pepperfry</a></li>
-<!--
-					  <li><a href="#YepMe"  role="tab" data-toggle="tab">YepMe</a></li>
-					  <li><a href="#YepMe"  role="tab" data-toggle="tab">YepMe</a></li>
-					  <li><a href="#YepMe"  role="tab" data-toggle="tab">YepMe</a></li>
--->
-			
                  </ul> 
-			 
 			 </div>
 			 <div class="col-md-9">
 			             <!-- Tab panes -->
@@ -105,12 +137,30 @@
 							  <div class="row" id="PepperfryPanel" >
 							  </div>
 					   </div>
-				</div> <!-- Tab panes -->  
+				</div> <!-- Tab panes --> 
+				<div>
+				<nav>
+				  <ul class="pagination">
+					<li>
+					  <a id="previous_load" href="#" aria-label="Previous">
+						<span aria-hidden="true">&laquo;</span>
+					  </a>
+					</li>
+					<li><a  class="one_load"   data_load="1">1</a></li>
+					<li><a  class="two_load"   data_load="2">2</a></li>
+					<li><a  class="three_load" data_load="3">3</a></li>
+					<li><a  class="four_load"  data_load="4">4</a></li>
+					<li><a  class="five_load"  data_load="5">5</a></li>
+					<li>
+					  <a class="next_load"  href="#" aria-label="Next">
+						<span aria-hidden="true">&raquo;</span>
+					  </a>
+					</li>
+				  </ul>
+				</nav>
+              </div> 
 			 
 			 </div>
-			 
-			 
-		       
 		 </div>
     </div><!--container fluid -->
 
