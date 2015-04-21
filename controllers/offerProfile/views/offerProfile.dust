@@ -1,212 +1,195 @@
 {>"../../../layout/layout"/}
 
 {<title-content}
-	
-	
-	<meta charset="utf-8" />
-	<meta name="viewport" content="width = device-width, initial-scale = 1.0, maximum-scale = 1.0 user-scalable = no" />
 
-	<meta name="description" content="{og_title}"/>
-	<meta name="keywords" content="flipkart,shopping,buy2gthr"/>
-	<title> buyTogether - india's first group shopping site</title>
 
-	<meta property="og:site_name" content="buy2gthr" />
-	<meta property="og:type" content="article" />
-	<meta property="fb:app_id" content="1561751127407847" />
-	<meta property="og:url" content="{og_url}" />
-	<meta property="og:title" content="{og_title}" />
-	<meta property="og:image" content="http://localhost:3000/images/flipkart.jpg" />
-	<meta property="og:description" content="{og_title}" />
-	<meta property="article:publisher" content="https://www.facebook.com/buy2gthr" />
-<!--	<meta property="article:published_time" content="2015-03-28 07:34:49" />-->
-	<meta property="article:section" content="Shopping" />
-<!--	<meta name="author" content="Joshua Moraes" />-->
-	<meta property='article:tag' content='flipkart' /> 
-	<meta property='article:tag' content='shopping' /> 
-	<meta property='article:tag' content='buy2gthr' /> 	
-	<meta name="twitter:card" content="summary_large_image" / >
-	<meta name="twitter:site" content="@buy2gthr" />
-	<meta name="twitter:creator" content="@buy2gthr" />
-	<meta name="twitter:image" content="http://localhost:3000/images/flipkart.jpg" />
-	<meta name="twitter:description" content="{og_title}" />
-	<meta name="twitter:title" content="{og_title}" />
-	<meta name="twitter:url" content="{og_url}" />
-	<meta name="twitter:domain" content="buy2gthr" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width = device-width, initial-scale = 1.0, maximum-scale = 1.0 user-scalable = no" />
 
-	<link rel='canonical' href='{og_url}' />
-	
+    <meta name="description" content="{og_title}"/>
+    <meta name="keywords" content="flipkart,shopping,buy2gthr"/>
+    <title> buyTogether - india's first group shopping site</title>
+
+    <meta property="og:site_name" content="buy2gthr" />
+    <meta property="og:type" content="article" />
+    <meta property="fb:app_id" content="1561751127407847" />
+    <meta property="og:url" content="{og_url}" />
+    <meta property="og:title" content="{og_title}" />
+    <meta property="og:image" content="http://localhost:3000/images/flipkart.jpg" />
+    <meta property="og:description" content="{og_title}" />
+    <meta property="article:publisher" content="https://www.facebook.com/buy2gthr" />
+<!--    <meta property="article:published_time" content="2015-03-28 07:34:49" />-->
+    <meta property="article:section" content="Shopping" />
+<!--    <meta name="author" content="Joshua Moraes" />-->
+    <meta property='article:tag' content='flipkart' />
+    <meta property='article:tag' content='shopping' />
+    <meta property='article:tag' content='buy2gthr' />
+    <meta name="twitter:card" content="summary_large_image" / >
+    <meta name="twitter:site" content="@buy2gthr" />
+    <meta name="twitter:creator" content="@buy2gthr" />
+    <meta name="twitter:image" content="http://localhost:3000/images/flipkart.jpg" />
+    <meta name="twitter:description" content="{og_title}" />
+    <meta name="twitter:title" content="{og_title}" />
+    <meta name="twitter:url" content="{og_url}" />
+    <meta name="twitter:domain" content="buy2gthr" />
+
+    <link rel='canonical' href='{og_url}' />
+
 {/title-content}
 {<css-content}
 <style>
-	.buy2gthr_share a
-	{
+    .buy2gthr_share a
+    {
         cursor : pointer;
-		text-decoration : none ;
+        text-decoration : none ;
     }
 </style>
 {/css-content}
 {<page-content}
      <div class="container">
-	   <div class="row">
-		   <div id ="bread">
-			  <ul class="breadcrumb">  
-					  <li>  
-						<a href="/home">Home</a> <span class="divider">></span>  
-					  </li>
-				       <li>  
-						<a href="/top-online-stores">top-online-stores</a> <span class="divider">></span>  
-					  </li>
-				       <li>  
-						<a href="/top-online-stores/type/{company}">{company}</a> <span class="divider">></span>  
-					  </li> 
-				 
-					  <li class="active">{company}Offer - {og_title}</li>  
-			  </ul>
-		   </div>
-	   </div>
-	   
-	   <div class="row">
-		   <div class="col-md-3" id="place1">
-			  <div class="panel panel-default">	
-					<div class="panel-body" align="center">
-					    <img src="/js/custom/home/flip1.png" class="img-rounded" />
-						<br />
-						<h5><strong>{plan_name}</strong></h5>
-						<p>&nbsp;</p>
-						<div class='txt2'><strong><h5>[Min Price. {min_price}]</h5></strong></div>
-						<div class='text-muted'><h5>[coupon_code:{coupon_code}]</h5></div>
-						 <div>
-							  <p><a class='btn btn-primary btn-md' href='{offer_link}' target='_blank'>Shop Now</a></p>
-						 </div>
-						 <div>
-							  <ul class="list-inline buy2gthr_share">
-								  <li><a class="fb_share" title="share on facebook">fb</a></li>
-								  <li><a class="twitt_share"  title="share on twitter">tw</a></li>
-								  <li><a class="stumb_share"  title="share on stumblupon" >st</a></li>
-								  <li><a class="email_share"  title="share via email" >em</a></li>
-							  </ul>	  
-						 </div>
-						 <p>&nbsp;</p>
-						<strong id="page_views">Page views - {page_views}</strong>
-						 <footer>posted 1 min ago</footer>
-					</div>
-			  </div>	
-					  <!-- panel 1-->
-			</div><!-- col -->
-				<div class="col-md-9">	
-				  <div class="row">
-				   <!-- Nav tabs -->
-						<ul class="nav nav-tabs" role="tablist">
-						  <li class="active"><a href="#home"  role="tab" data-toggle="tab" ><span class="glyphicon glyphicon-user"></span>current offer</a></li>
-						  <li><a href="#profile"  role="tab" data-toggle="tab" onclick="getallmates();"><span class="glyphicon glyphicon-record"></span>invite your college/compmates </a></li>
-						   <li><a href="#city"  role="tab" data-toggle="tab" onclick="getallcitymates();"><span class="glyphicon glyphicon-road"></span>invite your city mates</a></li>
-							<li><a href="#newfriend"  role="tab" data-toggle="tab" ><span class="glyphicon glyphicon-road"></span>invite your friends's on buy2gthr</a></li>
-						  
-						</ul>
-						
-						<!-- Tab panes -->
-						<div class="tab-content">
-						  <div class="tab-pane active" id="home">
-						       
-									<div class="panel panel-default">
-									  <div class="panel-body">
-										  {@if cond="('{userid}'.length)"}
-										  <table id="example"  cellpadding="0" cellspacing="0" border="0" class="datatable table table-responsive table-striped table-bordered">
-												<thead>
-													<tr>
-														<th>name</th>
-														<th>Address</th>
-														<th>Status</th>
-														<th>email</th>
-													</tr>
-												</thead>
-												<tbody>
-												
-												</tbody>
-				                            </table>
-										  {:else}
-										  
-										  <h3>nobody interested in current offer ,please invite your friends from other tabs</h3>
-                                          {/if}   
-									  </div>
-									</div> 
-									
-									
-						  </div>
-						  <div class="tab-pane" id="profile">
-						  
-						              <div class="panel panel-default">
-									  <div class="panel-body">
-									        <table id="allmates"  cellpadding="0" cellspacing="0" border="0" class="datatable table table-responsive table-striped table-bordered">
-												<thead>
-													<tr>
-														<th>name</th>
-														<th>colg/comp name</th>
-														<th>Status</th>
-														<th>email</th>
-														<th>invite</th>
-														
-													</tr>
-												</thead>
-												<tbody>
-												
-												</tbody>
-												
-				                            </table>  
-									  </div>
-									</div> 
-						    </div>
-							<div class="tab-pane" id="city">
-						  
-						              <div class="panel panel-default">
-									  <div class="panel-body">
-										    <div>
-												<ul class="list-inline  pull-left">
-													<li><button onclick="getLocation()" class="btn btn-primary">current location</button></li>
-													<li><small>use exact location</small></li>
-												</ul>	
-										  </div>
-									        <table id="allcitymates"  cellpadding="0" cellspacing="0" border="0" class="datatable table table-responsive table-striped table-bordered">
-												<thead>
-													<tr>
-														<th>name</th>
-														<th>Address</th>
-														<th>Status</th>
-														<th>email</th>
-														<th>invite</th>
-													</tr>
-												</thead>
-												<tbody>
-												
-												</tbody>	
-				                            </table>  
-									  </div>
-									</div> 
-						    </div>
-							<div id="newfriend">
-							
-							
-							 invite 
-							
-							
-							</div>
-						</div>
-				  </div>
-				  
-	            </div>		
-	   </div>
-		 <div class="row">
-			 <div><a  data-toggle="tooltip" title="Example tooltip">Hover over me</a></div>
-			 <button type="button" class="btn btn-lg btn-danger" data-toggle="popover" title="Popover title"  data-content="And here's some amazing content. It's very engaging. Right?">Click to toggle popover</button>
-		 </div>
-	   
-	 </div>
+       <div class="row">
+           <div id ="bread">
+              <ul class="breadcrumb">
+                      <li>
+                        <a href="/home">Home</a> <span class="divider">></span>
+                      </li>
+                       <li>
+                        <a href="/top-online-stores">top-online-stores</a> <span class="divider">></span>
+                      </li>
+                       <li>
+                        <a href="/top-online-stores/type/{company}">{company}</a> <span class="divider">></span>
+                      </li>
+
+                      <li class="active">{company}Offer - {og_title}</li>
+              </ul>
+           </div>
+       </div>
+
+       <div class="row">
+           <div class="col-md-3" id="place1">
+              <div class="panel panel-default">
+                    <div class="panel-body" align="center">
+                        <img src="/js/custom/home/flip1.png" class="img-rounded" />
+                        <br />
+                        <h5><strong>{plan_name}</strong></h5>
+                        <p>&nbsp;</p>
+                        <div class='txt2'><strong><h5>[Min Price. {min_price}]</h5></strong></div>
+                        <div class='text-muted'><h5>[coupon_code:{coupon_code}]</h5></div>
+                         <div>
+                              <p><a class='btn btn-primary btn-md' href='{offer_link}' target='_blank'>Shop Now</a></p>
+                         </div>
+                         <div>
+                              <ul class="list-inline buy2gthr_share">
+                                  <li><a class="fb_share" title="share on facebook">fb</a></li>
+                                  <li><a class="twitt_share"  title="share on twitter">tw</a></li>
+                                  <li><a class="stumb_share"  title="share on stumblupon" >st</a></li>
+                                  <li><a class="email_share"  title="share via email" >em</a></li>
+                              </ul>
+                         </div>
+                         <p>&nbsp;</p>
+                        <strong id="page_views">Page views - {page_views}</strong>
+                         <footer>{date_diff}</footer>
+                    </div>
+              </div>
+                      <!-- panel 1-->
+            </div><!-- col -->
+                <div class="col-md-9">
+                  <div class="row">
+                   <!-- Nav tabs -->
+                        <ul class="nav nav-tabs" role="tablist">
+                          <li class="active"><a href="#home"  role="tab" data-toggle="tab" ><span class="glyphicon glyphicon-user"></span>current offer</a></li>
+                          <li><a href="#profile"  role="tab" data-toggle="tab" onclick="getallmates();"><span class="glyphicon glyphicon-record"></span>invite your college/compmates </a></li>
+                           <li><a href="#city"  role="tab" data-toggle="tab" onclick="getallcitymates();"><span class="glyphicon glyphicon-road"></span>invite your city mates</a></li>
+                            <li><a href="#newfriend"  role="tab" data-toggle="tab" ><span class="glyphicon glyphicon-road"></span>invite your friends's on buy2gthr</a></li>
+
+                        </ul>
+
+                        <!-- Tab panes -->
+                        <div class="tab-content">
+                          <div class="tab-pane active" id="home">
+                                <div class="panel panel-default">
+                                  <div class="panel-body">
+                                      {@if cond="('{userid}'.length)"}
+                                      <table id="example"  cellpadding="0" cellspacing="0" border="0" class="datatable table table-responsive table-striped table-bordered">
+                                            <thead>
+                                                <tr>
+                                                    <th>name</th>
+                                                    <th>Address</th>
+                                                    <th>Status</th>
+                                                    <th>email</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+
+                                            </tbody>
+                                        </table>
+                                      {:else}
+                                      <h3>nobody interested in current offer ,please invite your friends from other tabs</h3>
+                                      {/if}
+                                  </div>
+                                </div>
+                          </div>
+                          <div class="tab-pane" id="profile">
+                                 <div class="panel panel-default">
+                                      <div class="panel-body">
+                                            <table id="allmates"  cellpadding="0" cellspacing="0" border="0" class="datatable table table-responsive table-striped table-bordered">
+                                                <thead>
+                                                    <tr>
+                                                        <th>name</th>
+                                                        <th>colg/comp name</th>
+                                                        <th>Status</th>
+                                                        <th>email</th>
+                                                        <th>invite</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                </tbody>
+                                            </table>
+                                      </div>
+                                </div>
+                            </div>
+                            <div class="tab-pane" id="city">
+                                  <div class="panel panel-default">
+                                      <div class="panel-body">
+                                            <div>
+                                                <ul class="list-inline  pull-left">
+                                                    <li><button onclick="getLocation()" class="btn btn-primary">current location</button></li>
+                                                    <li><small>use exact location</small></li>
+                                                </ul>
+                                            </div>
+                                            <table id="allcitymates"  cellpadding="0" cellspacing="0" border="0" class="datatable table table-responsive table-striped table-bordered">
+                                                <thead>
+                                                    <tr>
+                                                        <th>name</th>
+                                                        <th>Address</th>
+                                                        <th>Status</th>
+                                                        <th>email</th>
+                                                        <th>invite</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody></tbody>
+                                            </table>
+                                      </div>
+                                </div>
+                            </div>
+                        </div>
+                  </div>
+
+                </div>
+       </div>
+<!--
+         <div class="row">
+             <div><a  data-toggle="tooltip" title="Example tooltip">Hover over me</a></div>
+             <button type="button" class="btn btn-lg btn-danger" data-toggle="popover" title="Popover title"  data-content="And here's some amazing content. It's very engaging. Right?">Click to toggle popover</button>
+         </div>
+-->
+
+     </div>
  {/page-content}
  {<script-content}
-<script>     
-	 var ids = {offer_id} ;		  
-	 var page_views = {page_views};
+<script>
+     var ids = {offer_id} ;
+     var page_views = {page_views};
 </script>
 <script src='/js/custom/offerProfile/offerProfile.js'></script>
  {/script-content}
-  

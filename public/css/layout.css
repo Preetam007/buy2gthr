@@ -29,8 +29,8 @@ border-bottom: 1px solid #ccc;
  {
  margin-top: 5px;
  margin-left:10px;
- }		
-			    
+ }
+
 .tt-query,
 .tt-hint {
     width: 396px;
@@ -65,15 +65,45 @@ border-bottom: 1px solid #ccc;
 }
 #menu14
 {
-	  max-height: 250px;
+      max-height: 250px;
      overflow-y: auto;
-	
+
 }
 .tt-suggestion {
     padding: 3px 20px;
     font-size: 18px;
     line-height: 24px;
 }
+
+.pagination > li {
+/*    display: inline;*/
+    cursor: pointer;
+}
+.data-box:hover
+{
+    border-color: purple;
+}
+
+.data-box:hover,.data-box:active, .data-box:focus {
+  border-color: purple;
+  border-width: 2px;
+  border-style: dashed;
+    cursor:pointer;
+}
+
+.online_stores
+{
+   overflow: scroll;
+   height: 520px;
+}
+
+.wait_load
+{
+      text-align: center;
+      background-color: gainsboro;
+}
+
+
 
 .tt-suggestion.tt-is-under-cursor { /* UPDATE: newer versions use .tt-suggestion.tt-cursor */
     color: #fff;
