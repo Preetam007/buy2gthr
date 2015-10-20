@@ -21,7 +21,7 @@
         auth: 
         {
             user: user,
-            pass: "myway$1A"
+            pass: "abc"
         }
     });
     exports.smtpTransport = smtpTransport;
