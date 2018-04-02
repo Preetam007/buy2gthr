@@ -1,2 +1,2 @@
 # buy2gthr
-let us by together
+let's by together
